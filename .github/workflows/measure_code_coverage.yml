@@ -1,0 +1,42 @@
+# Measure the percentage of code covered by tests
+name: Measure Codecov
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  measure_code_coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Setup Python
+      uses: actions/setup-python@master
+
+    - name: Remove folders that need no checking for code style
+      run: |
+        rm -rf learners
+        rm tests/test_richel.py
+
+    - name: Generate Report
+      run: |
+        pip install coverage
+        coverage run -m unittest
+        coverage report
+          
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: programming-formalisms/programming_formalisms_project_autumn_2025
+
+
+
+
+
+
+
+
+

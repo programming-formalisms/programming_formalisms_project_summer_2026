@@ -1,0 +1,34 @@
+# Build and inspect the Python package
+name: Check package
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-package:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@master
+        with:
+          python-version: '3.13' 
+
+      - name: Install package requirements
+        run: pip install -r requirements.txt
+
+      - name: Install this local package
+        run: python3 -m pip install .
+
+      - name: Run console application
+        run: ./scripts/run_console.sh
+
+      # No idea where this is good for ...?
+      - uses: hynek/build-and-inspect-python-package@v2
+
+      - name: Confirm files are created
+        run: ls
