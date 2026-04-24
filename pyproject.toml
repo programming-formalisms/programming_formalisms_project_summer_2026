@@ -22,8 +22,8 @@ classifiers = [
 
 
 [project.urls]
-"Homepage" = "https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025"
-"Bug Tracker" = "https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/issues"
+"Homepage" = "https://github.com/programming-formalisms/programming_formalisms_project_summer_2026"
+"Bug Tracker" = "https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/issues"
 
 [tool.ruff]
     lint.select = ["ALL"]

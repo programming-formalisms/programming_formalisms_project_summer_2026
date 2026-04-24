@@ -1,14 +1,14 @@
-# programming_formalisms_project_autumn_2025
+# programming_formalisms_project_summer_2026
 
 <!-- markdownlint-disable MD013 --><!-- Badges cannot be split up over lines, hence will break 80 characters per line -->
 
-[![Check code style](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_code_style.yaml/badge.svg?branch=main)](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_code_style.yaml)
-[![Check links](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_links.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_links.yaml)
-[![Check Markdown](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_markdown.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_markdown.yaml)
-[![Check package](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_package.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_package.yaml)
-[![Check spelling](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_spelling.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/check_spelling.yaml)
-[![Measure Codecov](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/measure_code_coverage.yml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_autumn_2025/actions/workflows/measure_code_coverage.yml)
-[![codecov](https://codecov.io/github/programming-formalisms/programming_formalisms_project_autumn_2025/graph/badge.svg?token=KbSwhVmhn6)](https://codecov.io/github/programming-formalisms/programming_formalisms_project_autumn_2025)
+[![Check code style](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_code_style.yaml/badge.svg?branch=main)](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_code_style.yaml)
+[![Check links](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_links.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_links.yaml)
+[![Check Markdown](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_markdown.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_markdown.yaml)
+[![Check package](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_package.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_package.yaml)
+[![Check spelling](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_spelling.yaml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/check_spelling.yaml)
+[![Measure Codecov](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/measure_code_coverage.yml/badge.svg)](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/actions/workflows/measure_code_coverage.yml)
+[![codecov](https://codecov.io/github/programming-formalisms/programming_formalisms_project_summer_2026/graph/badge.svg?token=KbSwhVmhn6)](https://codecov.io/github/programming-formalisms/programming_formalisms_project_summer_2026)
 
 <!-- markdownlint-enable MD013 -->
 
