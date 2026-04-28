@@ -12,7 +12,9 @@
 
 <!-- markdownlint-enable MD013 -->
 
-Learners' project of the Programming Formalisms course of autumn 2024.
+Learners' project of the Programming Formalisms course of summer 2026
+
+- [The 'Programming Formalisms Summer 2026' team page](https://github.com/orgs/programming-formalisms/teams/2026_summer)
 
 ## Goal
 
