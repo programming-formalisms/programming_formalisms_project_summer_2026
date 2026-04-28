@@ -6,8 +6,8 @@ build-backend = "hatchling.build"
 packages = ["src/weather"]
 
 [project]
-name = "uppsalaweatherGabriel"
-version = "0.9"
+name = "uppsalaweathersummer2026"
+version = "0.1"
 authors = [
   { name="Richèl Bilderbeek", email="rjcbilderbeek@gmail.com" },
 ]
