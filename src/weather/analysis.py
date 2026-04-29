@@ -1,13 +1,10 @@
 """Perform the analysis."""
-import os
 
 
 def do_analysis():
     """Do the analysis."""
-    figure_file = os.open("figure.png", "w")
-    figure_file.write("Stub for an image")
-    figure_file.close()
+    with open("figure.png") as figure_file:
+        figure_file.write("Stub for an image")
 
-    stats_file = os.open("statistics_results.txt", "w")
-    stats_file.write("Stub for a statistics file")
-    stats_file.close()
+    with open("statistics_results.txt") as stats_file:
+        stats_file.write("Stub for a statistics file")

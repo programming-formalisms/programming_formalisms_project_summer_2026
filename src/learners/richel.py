@@ -1,6 +1,4 @@
 """Richel's code."""
-import os
-
 from scipy import stats
 
 
@@ -52,8 +50,9 @@ def file_exists(filename):
 
 def create_figure():
     """Create the boxplot of temperatures."""
-    file = os.open("figure.png", os.O_RDONLY)
-    file.close()
+    with open("figure.png") as file:
+        file.write("TODO: create actual figure")
+
 
 assert create_figure.__doc__
 create_figure()
@@ -61,12 +60,11 @@ assert file_exists("figure.png")
 
 def create_statistics_file():
     """Create the file with the statistics needed."""
-    file = os.open("statistics_results.txt", "w")
-    p_value = calc_p_value()
-    assert p_value >= 0.0
-    assert p_value <= 1.0
-    file.write("p value:" + str(p_value))
-    file.close()
+    with open("statistics_results.txt") as file:
+        p_value = calc_p_value()
+        assert p_value >= 0.0
+        assert p_value <= 1.0
+        file.write("p value:" + str(p_value))
 
 
 assert create_statistics_file.__doc__
