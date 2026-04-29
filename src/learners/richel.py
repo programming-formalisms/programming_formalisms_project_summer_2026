@@ -6,10 +6,11 @@ def get_name():
 
 def collect_first_third_temperatures():
     return range(1, 100)
-                                     
+
 def get_first_third_temperatures():
     """Get the first third of temperatures.
-    This excludes the year 1722, as this year is not completely measured."""
+    This excludes the year 1722, as this year is not completely measured.
+    """
     return collect_first_third_temperatures()
 
 assert len(get_first_third_temperatures()) > 10
