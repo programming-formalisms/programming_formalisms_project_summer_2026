@@ -24,11 +24,6 @@ jobs:
         run: |
           rm -rf learners
 
-      # Unsure to use these
-      - name: Remove files that maybe are to be ignored
-        run: |
-          rm learners/README-EXT.md
-
       # Indented blocks are ignored, as the linter assumes it to be code.
       # In our case, it is not: for us, it is usually an admonition (i.e. a 'question' or 'info' block)
       # Here all indented text is unindented
