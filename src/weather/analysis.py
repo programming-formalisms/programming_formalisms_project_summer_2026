@@ -1,3 +1,4 @@
+"""Perform the analysis."""
 import os.open
 
 
