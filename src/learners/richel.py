@@ -1,5 +1,5 @@
 """Richel's code."""
-import os.open
+import os
 
 from scipy import stats
 

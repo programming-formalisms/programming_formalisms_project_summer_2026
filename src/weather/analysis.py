@@ -1,5 +1,5 @@
 """Perform the analysis."""
-import os.open
+import os
 
 
 def do_analysis():
