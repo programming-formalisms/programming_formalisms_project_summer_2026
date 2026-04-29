@@ -22,7 +22,9 @@ pip install -i https://test.pypi.org/simple/ uppsalaweather==0.9
 
 First follow the [Installation instructions](). 
 
-To find the data in this repository you can go [here](https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/tree/about/data). The program can take either `csv` or `dat` formats.
+To find the data in
+[the `data` folder of this repository](../data/README.md).
+The program can take either `csv` or `dat` formats.
 
 The most common arguments used would be:
 
