@@ -52,7 +52,7 @@ def file_exists(filename):
 
 def create_figure():
     """Create the boxplot of temperatures."""
-    file = os.open("figure.png", "w")
+    file = os.open("figure.png", os.O_RDONLY)
     file.close()
 
 assert create_figure.__doc__
