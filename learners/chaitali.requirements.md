@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases
+Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases | Risk |                                            
 --------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------
 R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data`
 R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors
