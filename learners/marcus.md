@@ -35,9 +35,9 @@ This is a simple test where we do not take larger wetherevents in to account. No
 # Requirements
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
-
-Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases
---------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------
+, severity and mitigation strategy
+Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases                                                                                                                     | Risk                                | Risk type             | Midigation  | probablity | Severity | mitigation strategy
+--------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|------------------------|-----------|-----------|-------------|-------|
 R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data`
 R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors
 R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
