@@ -2,8 +2,8 @@
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases|Risks| Risk type| Probablity | Severity | Mitigation strategy
---------------|--------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------ ------------------------------------------------
+Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases |  Risk | Risk type | Probablity | Severity | Mitigation strategy
+--------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---|--|---|--|---|
 R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data` |5|-|1|5|Test for file read and parse
 R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors |5
 R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
