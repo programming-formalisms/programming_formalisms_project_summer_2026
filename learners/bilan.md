@@ -31,7 +31,7 @@ This will be trend analysis or comparative study on data available only with out
 
 Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases                                                                |Risk analysis
 --------------|--------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------|----------------------------------------------
-R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data` |Acceptable
+R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data` | the file could be misread without a clear and defend title.
 R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors
 R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
 R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file
@@ -41,7 +41,7 @@ R1.4          |Read data file is read in a short time                           
 R1.5          |Reading an absent file gives an error                               |Passes the test case  |If the file cannot be found, create a helpful error message, that includes the path of the absent file
 R1.6          |Table column names are documented                                   |Passes the test case  |The documentation contains the names of the columns
 .             |.                                                                   |Two humans agree      |The documentation describes the content of the columns
-R2            |Can work with `datetime` strings                                    |Passes all test cases |.
+R2            |Can work with `datetime` strings                                    |Passes all test cases |. | this could be over engineered
 R2.1          |The function `is_datetime` detects a `datetime` correctly           |Passes all test cases |`is_datetime` returns true if the string passed to it is `2025-02-28 16:40`
 R2.1.1        |`is_datetime` works on a string                                     |Passes all test cases |`is_datetime` raises an exception if it is passed something else than a string as its only argument
 R2.1.2        |`is_datetime` works on a string of the correct length               |Passes all test cases |`is_datetime` returns false if the string passed to it has a length other than 16, e.g. `nonsense`
