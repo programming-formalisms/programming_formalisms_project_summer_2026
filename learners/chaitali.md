@@ -17,3 +17,10 @@
  ## Discussion
 
  This package is a correlation study and does not account for historical events and industrialization
+
+ ## Requirements
+ Requirements are available in requiremnts.md and the data and metadata are uppsala_tm_1722-2022.dat and uppsala_tm_1722-2022.txt files
+
+ *Note for addition to requirements* : 1. read_data should be blind to the format of the data inputed
+         2. The date time format is in 3 columns
+         3. Additional requirement by the tool can be if provided in form of string, the tool should transform the date to the applied format.
