@@ -79,7 +79,7 @@ R100.2        |Decisions are adopted                                            
 
 What is a Verification and validation? 
 	- Verification - if the Software is doing what it should be doing
-	- Validation - is that Software is stable, not such for me but for others
+	- Validation - is that Software stable, not such for me but for others
 Both of these steps are needed for a good quality in coding and software. 
 
 What are requirements and why do they need to be specific? 
@@ -88,7 +88,7 @@ What are requirements and why do they need to be specific?
 Regulatory requirements - used to show how you designed something and how AI is used in your work. 
 
 Software Requirements Specification (SRS) - 
-Requirements need to be specific but not too much so you don’t lose your information and cause confusion - so you need to use the minimum amount to reach the desired level. Sometimes you define a requirement as a high level so there needs to be an underline balance understanding. 
+Requirements need to be specific but not too much so you don’t lose your information and cause confusion - so you need to use the minimum amount to reach the desired level. Sometimes you define a requirement as a high level so there needs to be an underline base understanding. 
 - Risk of over-engineering and risk of under-specifying 
 - Risk of sharing data AI when it comes to specific requirements 
 - Write a test for your requirement and see if you filled that requirement 
