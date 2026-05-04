@@ -29,9 +29,9 @@ This will be trend analysis or comparative study on data available only with out
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases
---------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------
-R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data`
+Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases                                                                |Risk analysis
+--------------|--------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------|----------------------------------------------
+R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data` |Acceptable
 R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors
 R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
 R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file
