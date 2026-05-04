@@ -6,7 +6,7 @@ Requirement ID|Requirement description                                          
 --------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---|--|---|--|---|
 R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data` |5|-|1|5|Test for file read and parse
 R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors |5|-|1|5|Test for file read and parse
-R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
+R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`0) produces a table |2|- full code missing date|1|2|Test for table creation 
 R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file
 R1.3          |The table produced from reading the data has the correct content    |Passes the test case  |The column names must match between file and the table that is created by reading the file
 .             |.                                                                   |Passes the test case  |The content of the first row of the table created by loading the file, matches exactly the content of the first row in the file
