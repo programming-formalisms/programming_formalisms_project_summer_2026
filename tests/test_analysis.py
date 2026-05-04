@@ -3,7 +3,8 @@
 import os.path
 import unittest
 
-from src.weather.analysis import do_analysis
+# from src.weather.analysis import do_analysis
+from weather.analysis import do_analysis
 
 
 class TestAnalysis(unittest.TestCase):

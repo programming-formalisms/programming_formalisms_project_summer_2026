@@ -1,8 +1,8 @@
 """Perform the analysis."""
 
-from anna import read_data as annas_read_data
-from sven import create_figure as svens_create_figure
-from sven import create_statistics_output as svens_create_statistics_output
+from weather.anna import read_data as annas_read_data
+from weather.sven import create_figure as svens_create_figure
+from weather.sven import create_statistics_output as svens_create_statistics_output
 
 
 def read_data():
