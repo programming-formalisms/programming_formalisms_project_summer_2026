@@ -19,3 +19,6 @@ A comparative analysis across four time periods, using the 1700s–1800 as a bas
 
 Data will be presented in graphs and assessed using p-values.
 
+## Discussion
+This will be trend analysis or comparative study on data available only with out any input of historical events
+
