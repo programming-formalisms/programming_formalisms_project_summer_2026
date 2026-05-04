@@ -21,4 +21,13 @@ D) Results
 
 E) Discussion
 
+FORMAL REQUIREMENTS Discussion
+
+Well formed requirements are a group of requirements with description, test criteria, and expected outcome. 
+Tailored to each project. 
+With as many points as needed for aparticular project and team.
+Keep always up to date accoring to the latest team decisions. 
+
+
+
 
