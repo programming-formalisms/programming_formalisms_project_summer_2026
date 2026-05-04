@@ -8,13 +8,11 @@ Registered Report:
 
 Well formed requirement :
 ---
-For creating and maintaining a package, we should follow a set of requirements according to standard regulations
+For creating and maintaining a software package, we should follow a set of requirements according to standard regulations
 And, every time we have any modification in our package, we should check the requirements again.
 
 Risk Analysis for each requirements
-
-# Requirements
-
+---
 # Requirements
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
