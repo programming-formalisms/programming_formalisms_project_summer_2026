@@ -14,21 +14,21 @@ R1.5          |Reading an absent file gives an error                            
 R1.6          |Table column names are documented                                   | |  |  |
 R2            |Can work with `datetime` strings                                    | | | |
 R2.1          |The function `is_datetime` detects a `datetime` correctly           | Returns TRUE if not `datetime`/Returns FALSE if `datetime` | S4 | P4 | Explicitly, a lot of tests 
-R2.1.1        |`is_datetime` works on a string                                     |Passes all test cases |`is_datetime` raises an exception if it is passed something else than a string as its only argument
-R2.1.2        |`is_datetime` works on a string of the correct length               |Passes all test cases |`is_datetime` returns false if the string passed to it has a length other than 16, e.g. `nonsense`
-R2.1.3        |A `datetime` string has a valid year                                |Passes all test cases |`is_datetime` returns false if the first 4 characters of a `datetime` string are not numbers, e.g. `XXXX-02-28 16:40`
-R2.1.4        |A `datetime` string has a dash between year and month               |Passes all test cases |`is_datetime` returns false if the 5th character of a `datetime` string is not a dash, e.g. `2025X02-28 16:40`
-R2.1.5        |A `datetime` string has a valid month                               |Passes all test cases |`is_datetime` returns false if the 6th and 7th character of a `datetime` string is not a number from `01` to and including `12`, e.g. `2025-99-28 16:40`
-R2.1.6        |A `datetime` string has a dash between month and day                |Passes all test cases |`is_datetime` returns false if the 8th character of a `datetime` string is not a dash, e.g. `2025-02X28 16:40`
-R2.1.7        |A `datetime` string has a valid day                                 |Passes all test cases |`is_datetime` returns false if the 9th and 10th character of a `datetime` string is not a number from `01` to and including `31`, e.g. `2025-02-99 16:40`
-R2.1.8        |A `datetime` string has a space between date and time               |Passes all test cases |`is_datetime` returns false if the 11th character of a `datetime` string is not a space, e.g. `2025-02-28X16:40`
-R2.1.9        |A `datetime` string has a valid hour                                |Passes all test cases |`is_datetime` returns false if the 12th and 13th character of a `datetime` string is not a number from `00` to and including `23`, e.g. `2025-02-28 99:40`
-R2.1.10       |A `datetime` string has a colon between hours and minutes           |Passes all test cases |`is_datetime` returns false if the 14th character of a `datetime` string is not a colon, e.g. `2025-02-28 16X40`
-R2.1.11       |A `datetime` string has a valid minute                              |Passes all test cases |`is_datetime` returns false if the 15th and 16th character of a `datetime` string is not a number from `00` to and including `59`, e.g. `2025-02-28 16:99`
-R2.1.12       |Different months have different amounts of days                     |Passes all test cases |`is_datetime` returns false if the date is not valid in regular years, e.g. `2025-02-31 16:40`
-R2.1.13       |Leap years have 29 days in February                                 |Passes all test cases |`is_datetime` returns true for the date 29th February of a leap year, e.g. `2024-02-29 16:40`, but false for a non-leap year, e.g. `2023-02-29 16:40`
-R2.2          |The function `is_datetime` describes the `datetime` limits          |Two humans agree      |The documentation describes the limits of a `datetime` string, e.g. going from year 1 to and including year 9999
-R3            |Can predict temperatures by interpolation                           |Passes the test cases |.
+R2.1.1        |`is_datetime` works on a string                                     | see R2.1 | | |
+R2.1.2        |`is_datetime` works on a string of the correct length               | see R2.1 | | |
+R2.1.3        |A `datetime` string has a valid year                                | Out of range, keep track of current year | S3 | P3 | Specify the input range at the start
+R2.1.4        |A `datetime` string has a dash between year and month               | No dashes, weird format of the datetie | S3 | P3 | Rewrite the requirements to check for is String and then for format
+R2.1.5        |A `datetime` string has a valid month                               | Month is not an int | S3 | P3 | Rewrite the requirements to check for is Int and then if is in Range(1,12)
+R2.1.6        |A `datetime` string has a dash between month and day                | see R2.1.4 | | |
+R2.1.7        |A `datetime` string has a valid day                                 | see R2.1.5 | S3 | P3 | Rewrite the requirements to check for is Int and then if is in Range(1,y), y depending on month and year
+R2.1.8        |A `datetime` string has a space between date and time               | see R2.1.4 | | |
+R2.1.9        |A `datetime` string has a valid hour                                | see R2.1.5 | S0 | P3 | (optional)
+R2.1.10       |A `datetime` string has a colon between hours and minutes           | see R2.1.9 | | |
+R2.1.11       |A `datetime` string has a valid minute                              | see R2.1.9 | | |
+R2.1.12       |Different months have different amounts of days                     | see R2.1.7 | S3 | P3 | Use a library?? 
+R2.1.13       |Leap years have 29 days in February                                 | see R2.1.12 |  |  |
+R2.2          |The function `is_datetime` describes the `datetime` limits          |  |  |  |
+R3            |Can predict temperatures by interpolation                           | | | | 
 .             |The function `predict_temparature`'s first argument is the data     |Passes the test case  |Passing `predict_temperature` the data read from the file as a first argument gives no exception
 .             |.                                                                   |Passes the test case  |Passing `predict_temperature` any other type of data as a first argument raises an exception
 .             |The function `predict_temparature`'s second argument is a `datetime`|Passes the test case  |Passing `predict_temperature` a `datetime` as a second argument gives no exception
