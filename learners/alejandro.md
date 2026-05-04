@@ -1,1 +1,11 @@
-I think that the temperature will slowly incease. The will be a significative difference between the maximun and minimun temperatures over the years.
+# Research question
+
+Have the temperatures increased in Uppsala between 1722 to 2022?
+
+## Hypotheses
+
+Temperatures remain the same
+
+## Methods
+
+We group the years by 100 years. Only complete years are considered. We stimate the average temperature within each group and stimate if the change is significative (p-value 0.05).
