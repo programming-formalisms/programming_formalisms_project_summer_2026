@@ -1,4 +1,5 @@
 """Tests all code in src.learners.richel."""
+
 import unittest
 
 from src.learners.richel import get_name

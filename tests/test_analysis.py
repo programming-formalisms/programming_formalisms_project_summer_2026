@@ -1,4 +1,5 @@
 """The analysis must work as expected."""
+
 import os.path
 import unittest
 

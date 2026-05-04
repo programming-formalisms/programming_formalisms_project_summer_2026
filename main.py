@@ -7,7 +7,6 @@ You need to have the weather Python package installed.
 Tip: run './scripts/install_this_package.sh'
 """
 
-
 from weather.analysis import (
     do_analysis,
 )
