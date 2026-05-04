@@ -3,7 +3,7 @@
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
 Requirement ID|Requirement description                                             | Risk description     | Risk severity  | Risk probability | Mitigation strategy 
---------------|--------------------------------------------------------------------|----------------------|--------------------------------------------------------------------------|-|---------------------------------------------------
+--------------|--------------------------------------------------------------------|-------------------------------------------------------|-------|-----|---------------------------------------------------------------------------------
 R1            |Reading the data file follows best practices                        | | | |
 R1.1          |The data file can be read                                           | No file or corrupted | S4 | P4 | Check if file exists, check data integrity, error message if not
 R1.2          |Reading the data file produces a table                              | Wrong file format/type | S4 | P4 | Check file extesion, check file format, number of columns, data types in columns
