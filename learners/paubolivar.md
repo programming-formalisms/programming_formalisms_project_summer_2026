@@ -28,6 +28,8 @@ Tailored to each project.
 With as many points as needed for aparticular project and team.
 Keep always up to date accoring to the latest team decisions. 
 
+Day 2. Add comments and look at history.
+
 
 
 
