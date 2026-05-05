@@ -36,5 +36,5 @@ R100          |Best practices are followed                                      
 R100.1        |Best practices are discussed                                        |All team members agree|||If the team agrees a practice found in the academic literature to be best, it is discussed
 R100.2        |Decisions are made democratically                                   |All team members agree|||If there are candidate better practices, these are voted for/against
 R100.2        |Decisions are adopted                                               |All team members agree|||If a majority vote favors a practice, we adopt it
-
+A new line | foo| foo | foo| foo | f
 <!-- markdownlint-enable MD013 -->
