@@ -1,30 +1,21 @@
-Research question
-Does the average temperature in Uppsala increase over time in the period 1722 to 2022?
-
-Hypotheses
-As we know, the Earth’s temperature has risen by an average of 0.11°F (0.06°C) per decade since 1850. We therefore assume that the temperature in Uppsala may also show an increase between 1722 and 2022, or between 1850 and 2022.
-
-Methods
-We will first draw a graph showing the temperature curve through each year, this could global showing us the wealth change globally. Since the global earth termprature risen since 1850, we will 
-
 # Requirements
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases
---------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------
+Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases |  Risk | Risk type | Probablity | Severity | Mitigation strategy
+--------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---|--|---|--|---|
 R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data`
-R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors
-R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
-R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file
+R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors|  File cannot be read | Usage error | P5 | S3 | Display error message, and have good documentation
+R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table. |  Risk | Technical Risk | P3 | S4 | Read data as table, have good tests on file before
+R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file. |  Wrong column names | Data quality | P3 | S5 | Show data and column names to user. Tests to check column names are correct.
 R1.3          |The table produced from reading the data has the correct content    |Passes the test case  |The column names must match between file and the table that is created by reading the file
-.             |.                                                                   |Passes the test case  |The content of the first row of the table created by loading the file, matches exactly the content of the first row in the file
-R1.4          |Read data file is read in a short time                              |Passes the test case  |The file is read within 1 second
-R1.5          |Reading an absent file gives an error                               |Passes the test case  |If the file cannot be found, create a helpful error message, that includes the path of the absent file
+.             |.                                                                   |Passes the test case  |The content of the first row of the table created by loading the file, matches exactly the content of the first row in the file|  Wrong table content  | Data quality | P3 | S5 | Show some of the data to user and have good tests.
+R1.4          |Read data file is read in a short time                              |Passes the test case  |The file is read within 1 second |  Long read time for large files | Performance Issue | P3 | S3 | Check file size, performance testing, optimise large file reading.
+R1.5          |Reading an absent file gives an error                               |Passes the test case  |If the file cannot be found, create a helpful error message, that includes the path of the absent file |  Absent file | Technical risk | P3 | S4 | Show an error message when file is missing.
 R1.6          |Table column names are documented                                   |Passes the test case  |The documentation contains the names of the columns
-.             |.                                                                   |Two humans agree      |The documentation describes the content of the columns
+.             |.                                                                   |Two humans agree      |The documentation describes the content of the columns | Documentaion lack column names, or wrongly | Documentation | P2 | S3 | Write good documentation
 R2            |Can work with `datetime` strings                                    |Passes all test cases |.
-R2.1          |The function `is_datetime` detects a `datetime` correctly           |Passes all test cases |`is_datetime` returns true if the string passed to it is `2025-02-28 16:40`
+R2.1          |The function `is_datetime` detects a `datetime` correctly           |Passes all test cases |`is_datetime` returns true if the string passed to it is `2025-02-28 16:40`. |  Risk | Risk type | Probablity | Severity | Mitigation strategy
 R2.1.1        |`is_datetime` works on a string                                     |Passes all test cases |`is_datetime` raises an exception if it is passed something else than a string as its only argument
 R2.1.2        |`is_datetime` works on a string of the correct length               |Passes all test cases |`is_datetime` returns false if the string passed to it has a length other than 16, e.g. `nonsense`
 R2.1.3        |A `datetime` string has a valid year                                |Passes all test cases |`is_datetime` returns false if the first 4 characters of a `datetime` string are not numbers, e.g. `XXXX-02-28 16:40`
@@ -55,3 +46,4 @@ R100.2        |Decisions are made democratically                                
 R100.2        |Decisions are adopted                                               |All team members agree|If a majority vote favors a practice, we adopt it
 
 <!-- markdownlint-enable MD013 -->
+

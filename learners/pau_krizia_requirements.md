@@ -1,26 +1,17 @@
-Research question
-Does the average temperature in Uppsala increase over time in the period 1722 to 2022?
-
-Hypotheses
-As we know, the Earth’s temperature has risen by an average of 0.11°F (0.06°C) per decade since 1850. We therefore assume that the temperature in Uppsala may also show an increase between 1722 and 2022, or between 1850 and 2022.
-
-Methods
-We will first draw a graph showing the temperature curve through each year, this could global showing us the wealth change globally. Since the global earth termprature risen since 1850, we will 
-
 # Requirements
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
 
-Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases
---------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------
-R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data`
-R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors
-R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`) produces a table
-R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file
-R1.3          |The table produced from reading the data has the correct content    |Passes the test case  |The column names must match between file and the table that is created by reading the file
+Requirement ID|Requirement description                                             |Acceptance criteria   |Test cases |  Risk | Risk type | Probablity | Severity | Mitigation strategy
+--------------|--------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---|--|---|--|---|
+R1            |Reading the data file follows best practices                        |Passes the test case  |The `.csv` file is parsed correctly by a function called `read_data` |5|- usage error |1|5|Test for file usage error read and parse
+R1.1          |The data file can be read                                           |Passes the test case  |The content of the file can be read without errors |5|-|1|5|Test for file read and parse
+R1.2          |Reading the data file produces a table                              |Passes the test case  |Reading the existing data file (in `/data`0) produces a table |2|- full code missing data|1|2|Test for table creation 
+R1.2          |The table produced from reading the data has correct column names   |Passes the test case  |The column names must match between file and the table that is created by reading the file |5|- column names error |1|5|Test for file columns error
+R1.3          |The table produced from reading the data has the correct content    |Passes the test case  |The column names must match between file and the table that is created by reading the file |15|- content names error |3|5|Test for content names error file
 .             |.                                                                   |Passes the test case  |The content of the first row of the table created by loading the file, matches exactly the content of the first row in the file
-R1.4          |Read data file is read in a short time                              |Passes the test case  |The file is read within 1 second
-R1.5          |Reading an absent file gives an error                               |Passes the test case  |If the file cannot be found, create a helpful error message, that includes the path of the absent file
+R1.4          |Read data file is read in a short time                              |Passes the test case  |The file is read within 1 second |0|- null risk |1|0|Test speed null risk
+R1.5          |Reading an absent file gives an error                               |Passes the test case  |If the file cannot be found, create a helpful error message, that includes the path of the absent file |1|- null risk |3|0|Test for existing file. null risk
 R1.6          |Table column names are documented                                   |Passes the test case  |The documentation contains the names of the columns
 .             |.                                                                   |Two humans agree      |The documentation describes the content of the columns
 R2            |Can work with `datetime` strings                                    |Passes all test cases |.
