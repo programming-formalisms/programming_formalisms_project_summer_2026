@@ -17,3 +17,6 @@ A linear model plotting temperature with year as one predictor and season (Winte
 | --- | ---- | ---- | ---- |
 | I1 | Dataframe import | Data is imported as a dataframe | Test df variable type |
 | I2 | Value import | Data are in the correct format | Test numerical variables to be int or float and text to be char or string|
+
+## Output
+A report with results
