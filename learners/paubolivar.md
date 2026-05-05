@@ -30,6 +30,8 @@ Keep always up to date accoring to the latest team decisions.
 
 Day 2. Add comments and look at history.
 
+Day 2. VSC modification Pau and Krizia.
+
 
 
 
