@@ -12,7 +12,12 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+
       - name: Set up Git repository
         uses: actions/checkout@v4
+
+      - name: Remove files or folders that need not to be be spellchecked
+        run: |
+          rm -rf learners
 
       - uses: igsekor/pyspelling-any@v0.0.2
