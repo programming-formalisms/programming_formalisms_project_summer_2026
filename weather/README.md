@@ -3,6 +3,8 @@
 This folder, called `weather` is where all the code for the package `weather`
 is put.
 
+## Why use `weather` (instead of `src/weather`)?
+
 Using `weather` (instead of `src/weather`) is recommended by:
 
 - [The official Python documentation](https://docs.python.org/3/tutorial/modules.html#packages)
