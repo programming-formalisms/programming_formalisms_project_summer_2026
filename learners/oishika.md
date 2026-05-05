@@ -61,5 +61,7 @@ R100.2        |Decisions are made democratically                                
 R100.2        |Decisions are adopted                                               |All team members agree|If a majority vote favors a practice, we adopt it
 
 <!-- markdownlint-enable MD013 -->
-
+#
+#
+# A comment line.
 
