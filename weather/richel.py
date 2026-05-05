@@ -59,7 +59,7 @@ def file_exists(filename):
 
 def create_figure():
     """Create the boxplot of temperatures."""
-    with open("figure.png") as file:
+    with open("figure.png", "w") as file:
         file.write("TODO: create actual figure")
 
 
@@ -70,7 +70,7 @@ assert file_exists("figure.png")
 
 def create_statistics_file():
     """Create the file with the statistics needed."""
-    with open("statistics_results.txt") as file:
+    with open("statistics_results.txt", "w") as file:
         p_value = calc_p_value()
         assert p_value >= 0.0
         assert p_value <= 1.0

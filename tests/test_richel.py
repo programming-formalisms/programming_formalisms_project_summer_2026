@@ -4,7 +4,6 @@ import unittest
 
 from weather.richel import get_name
 
-
 class TestRichel(unittest.TestCase):
 
     """Class to test the code in src.learners.richel."""
