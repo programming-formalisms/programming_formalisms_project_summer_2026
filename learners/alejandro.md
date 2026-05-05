@@ -4,7 +4,7 @@ Have the temperatures increased in Uppsala between 1722 to 2022?
 
 ## Hypotheses
 
-Temperatures remain the same
+Temperatures remain the statisticaly the same
 
 ## Methods
 
