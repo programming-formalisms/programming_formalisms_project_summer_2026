@@ -2,7 +2,7 @@
 
 import unittest
 
-from src.learners.richel import get_name
+from weather.richel import get_name
 
 
 class TestRichel(unittest.TestCase):
