@@ -1,9 +1,9 @@
-# `src`
+# `weather`
 
-This folder, called `src` by convention, was where all source code is put.
+This folder, called `weather` is where all the code for the package `weather`
+is put.
 
-The project has switched to use `weather` (instead of `src/weather`),
-as is recommended by:
+Using `weather` (instead of `src/weather`) is recommended by:
 
 - [The official Python documentation](https://docs.python.org/3/tutorial/modules.html#packages)
 - The book [The Hitchhiker's guide to Python](https://docs.python-guide.org/writing/structure/)
