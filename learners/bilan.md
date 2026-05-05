@@ -93,5 +93,8 @@ Requirements need to be specific but not too much so you don’t lose your infor
 - Risk of sharing data AI when it comes to specific requirements 
 - Write a test for your requirement and see if you filled that requirement 
 - Define and draft requirements
+
+
+Hope and dream - version control 
   
 
