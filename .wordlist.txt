@@ -1,4 +1,6 @@
 Richèl
+nxp
+seaborn
 Richel
 Formalisms
 formalisms
