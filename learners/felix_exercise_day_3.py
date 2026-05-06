@@ -46,6 +46,11 @@ assert has_returned
 
 def is_odd(y):
     """The function returns True if the given number is odd, else False."""
-    pass
+    if is_even(y) == True:
+        return False
+    else:
+        return True
 
 assert is_odd.__doc__
+assert is_odd(1) == True
+assert is_odd(2) == False
