@@ -2,6 +2,8 @@
 
 def is_zero(a):
     """The function tests is a given number is zero."""
+    if not isinstance(a, int):
+        raise TypeError("a must be of type Integer")
     if (a == 0):
         return True
     else:
@@ -10,3 +12,10 @@ def is_zero(a):
 assert is_zero.__doc__
 assert is_zero(0) == True
 assert is_zero(1) == False
+
+has_thrown = False
+try: 
+    is_zero("nonsense")
+except: 
+    has_thrown = True
+assert has_thrown
