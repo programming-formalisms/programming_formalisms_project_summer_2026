@@ -37,3 +37,10 @@ except TypeError:
     has_thrown = True
 assert has_thrown
 
+
+
+def is_odd():
+    """Checks if number is odd and returns True, otherwise False"""
+    pass
+
+assert is_odd.__doc__
