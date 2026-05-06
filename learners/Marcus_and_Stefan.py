@@ -8,9 +8,7 @@ def is_zero(x=None):
         return True
     return False
 
-assert is_zero()
 
+def is_even():
 
-# Returns True if the input is even
-# Returns False if the input is not even
-# Gives an error when the input is not a number
+    pass
