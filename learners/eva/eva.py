@@ -1,12 +1,24 @@
 def is_even(num):
     """Check if input number is even. Retrun True is number is even, otherwise false. Raises an error when input is not a number.
     """
-    return True
+    if not isinstance(num, int):
+        raise TypeError("'num' must be of type int")
+    
+    if (num%2)==0:
+        return True
+    else:
+        return False
 
 assert is_even.__doc__
 assert is_even(2)
+assert not is_even(3)
 
-
+has_thrown = False
+try:
+    is_even(0.0)
+except TypeError:
+    has_thrown = True
+assert has_thrown
 
 
 
