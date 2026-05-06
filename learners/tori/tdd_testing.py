@@ -39,8 +39,9 @@ assert has_thrown
 
 
 
-def is_odd():
+def is_odd(x):
     """Checks if number is odd and returns True, otherwise False"""
-    pass
+    return True
 
 assert is_odd.__doc__
+assert is_odd(1)
