@@ -66,3 +66,18 @@ R100.2        |Decisions are adopted                                            
 # A comment line.
 # Just an edit!
 # ! Just a commit message
+
+#TDD
+#is_prime
+
+
+def is_prime(x):
+    """
+    Check whether the input is a prime number!
+    """
+    assert x > 1
+    assert isinstance(x, int)
+    pass
+    
+assert is_prime.__doc__
+is_prime(1.5)
