@@ -1,14 +1,3 @@
-def is_odd():
-    """Check if input number is odd. Return True if number is odd, else False. Raises a TypeError for invalid input.
-    """
-    pass
-
-assert is_odd.__doc__
-
-
-
-
-
 def is_even(num):
     """Check if input number is even. Retrun True is number is even, otherwise false. Raises an error when input is not a number.
     """
@@ -32,7 +21,19 @@ except TypeError:
 assert has_thrown
 
 
+################ Exercise 3 ###################
+def is_odd(num):
+    """Check if input number is odd. Return True if number is odd, else False. Raises a TypeError for invalid input.
+    """
+    return not is_even(num)
 
+assert is_odd.__doc__
+assert is_odd(3)
+
+
+
+
+############## Exercise 1 ######################
 def is_zero(num):
     """Check if input is zero. Return True if zero, False otherwise, Raises error if not a number.
     """
