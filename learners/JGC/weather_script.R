@@ -17,6 +17,8 @@ do_experiment <- function() {
   ggsave("~/programming_formalisms_project_summer_2026/programming_formalisms_project_summer_2026/learners/JGC/plot.png", p, device = "png")
 }
 
+do_experiment()
+
 files <- list.files("~/programming_formalisms_project_summer_2026/programming_formalisms_project_summer_2026/learners/JGC/")  
 "regression.txt" %in% files == TRUE
 "plot.png" %in% files == T
