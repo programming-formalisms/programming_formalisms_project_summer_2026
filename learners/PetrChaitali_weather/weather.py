@@ -26,7 +26,30 @@ def is_weatherData(df):
 
     Returns true if the the format is correct, otherwise returns False (and column name that fails)
     """
-    return True
+    if df.shape[1] != 6:
+        print("Dataframe must have 6 columns")
+        return False
+    if not pd.api.types.is_integer_dtype(df.iloc[:, 0]):
+        print("Column 0 should be int")
+        return False
+    if not pd.api.types.is_integer_dtype(df.iloc[:, 1]):
+        print("Column 0 should be int")
+        return False
+    if not pd.api.types.is_integer_dtype(df.iloc[:, 2]):
+        print("Column 0 should be int")
+        return False
+    if not pd.api.types.is_float_dtype(df.iloc[:, 3]):
+        print("Column 0 should be int")
+        return False
+    if not pd.api.types.is_float_dtype(df.iloc[:, 4]):
+        print("Column 0 should be int")
+        return False
+    if (not pd.api.types.is_integer_dtype(df.iloc[:, 5]) or not df.iloc[:, 5].between(1,6).all()):
+        print("Column 0 should be int and between 1 and 6.")
+        return False
+    else:
+        print ("This is the correct format.")
+        return True
 
 def is_dataframe(df):
     """
@@ -44,6 +67,7 @@ def get_seasonal_avg(x):
     return True
 
 data = pd.DataFrame.from_dict({'Col1':[1,2,3], 'Col2':[4,5,6]})
+test_df = pd.DataFrame.from_dict({'Col1':[1984,1985,1986], 'Col2':[4,5,6], 'Col3':[10,5,26], 'Col4':[10.4,12.7,22.1], 'Col5':[10.1,12.9,21.4],'Col6':[1,2,1]})
 assert get_seasonal_avg.__doc__
 assert is_dataframe.__doc__
 assert table_to_df.__doc__
@@ -51,3 +75,6 @@ assert is_dataframe(data)
 assert not is_dataframe('oiabroibgao')
 assert is_weatherData.__doc__
 assert is_weatherData(test_df)
+
+##maybe now we can filter for city
+assert city_filter.__doc__
