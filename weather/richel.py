@@ -1,6 +1,12 @@
 """Richel's code."""
 
 from scipy import stats
+from pathlib import Path
+
+
+def file_exists(path: Path):
+    """Check that the file exists."""
+    return path.is_file()
 
 
 def get_name():
