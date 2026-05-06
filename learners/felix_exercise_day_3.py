@@ -22,8 +22,12 @@ assert has_thrown
 
 # Create is_even function
 
-def is_even():
+def is_even(a):
     """The function tests if a given number is even."""
-    pass
+    if (a % 2 == 0):
+        return True
+    else:
+        return False
 
 assert is_even.__doc__
+assert is_even(2) == True
