@@ -4,14 +4,36 @@ def is_prime(x):
         x= int(x)
     except:
         return False
-    if x % 2 == 0:
-        print ('This is even')
+    
+    list_100=[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    prime=False
+
+    if x == 0:
         return False
-    elif x/3> 1 and x % 3 == 0:
-        print ('This can be divided by 3')
-        return False
-    else:
+    elif x == 1:
         return True
+    else:
+        for i in list_100:
+            if x % i == 0 and x != i:
+                print ('This can be divided by %s' %i)
+                return False
+    return True
+
+#    else:
+#        return True
+
+
+ #   if x == 0:
+ #       return False
+ #   elif x % 2 == 0:
+ #       print ('This is even')
+ #       return False
+    
+ #   elif x/3> 1 and x % 3 == 0:
+ #       print ('This can be divided by 3')
+ #       return False
+    
+    
 
     
 assert is_prime.__doc__
