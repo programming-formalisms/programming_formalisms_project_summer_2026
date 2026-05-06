@@ -31,17 +31,17 @@ def read_non_empty_file(filename):
 
 print(read_non_empty_file("/home/tori-giffin/repos/programming_formalisms_project_summer_2026/learners/tori/empty_file.txt"))
 
-##Exercise 5
-import weather
-weather.do_experiment(filename)
-    import os
-    assert os.path.isfile(filename)
-    assert os.access(filename, os.R_OK)
-    #read the data
-    #do the statistics
-    #save the statistics results to file
-    assert os.path.isfile("statistics_results.txt")
-    #create the figure 
-    #save the figure to file
-    assert os.path.isfile("figure")
+    ##Exercise 5
+    import weather
+    weather.do_experiment(filename)
+        import os
+        assert os.path.isfile(filename)
+        assert os.access(filename, os.R_OK)
+        #read the data
+        #do the statistics
+        #save the statistics results to file
+        assert os.path.isfile("statistics_results.txt")
+        #create the figure 
+        #save the figure to file
+        assert os.path.isfile("figure")
     
