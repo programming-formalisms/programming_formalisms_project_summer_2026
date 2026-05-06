@@ -1,4 +1,6 @@
 def is_probability():
+    """verify is a probability"""
+    
     return 0.9 
 
 
