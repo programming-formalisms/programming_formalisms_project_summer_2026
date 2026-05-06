@@ -83,3 +83,20 @@ try:
 except:
     has_thrown = True
 assert has_thrown
+
+# Exercise 5.4
+def is_prime(n:int):
+    """
+    This function accepts one argument that should be an interger
+
+    Returns True if input is a prime,
+    Returns False if input is not a prime,
+    Raises TypeError is input is not an int
+
+    """
+    if n <= 1:
+        return False
+    return True
+
+assert is_prime(0).__doc__
+
