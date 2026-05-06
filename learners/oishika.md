@@ -68,13 +68,16 @@ R100.2        |Decisions are adopted                                            
 # ! Just a commit message
 
 #TDD
-def is_prime():
+#is_prime
+
+
+def is_prime(x):
     """
     Check whether the input is a prime number!
     """
+    assert x > 1
+    assert isinstance(x, int)
     pass
-    # assert x >= 0
-    # for i in range(2,x):
-    #     if x % i != 0:
-    #         return True
+    
 assert is_prime.__doc__
+is_prime(1.5)
