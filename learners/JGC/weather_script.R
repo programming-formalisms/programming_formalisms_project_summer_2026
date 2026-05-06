@@ -12,8 +12,12 @@ do_experiment <- function() {
   sink("~/programming_formalisms_project_summer_2026/programming_formalisms_project_summer_2026/learners/JGC/regression.txt")
   print(summ_data)
   sink()
-  
-  p <- ggplot(data, aes(Year, Temperature_Corrected)) + geom_point() + geom_smooth(method='lm', formula= y~x)
+
+  # I think this is better for visualization
+  data %>% group_by(Year) %>% summarise(mean_T = mean(Temperature_Corrected))
+    
+  p <- ggplot(data %>% group_by(Year) %>% summarise(mean_T = mean(Temperature_Corrected)), 
+              aes(Year, mean_T)) + geom_point() + geom_smooth(method='lm', formula= y~x)
   ggsave("~/programming_formalisms_project_summer_2026/programming_formalisms_project_summer_2026/learners/JGC/plot.png", p, device = "png")
 }
 
