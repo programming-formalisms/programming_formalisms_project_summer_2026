@@ -41,7 +41,8 @@ assert has_thrown
 
 def is_odd(x):
     """Checks if number is odd and returns True, otherwise False"""
-    return True
+    return not is_even(x)
 
 assert is_odd.__doc__
 assert is_odd(1)
+assert not is_odd(2)
