@@ -4,9 +4,11 @@ def read_non_empty_file(filename):
     import os
     assert os.path.isfile(filename)
     assert os.access(filename, os.R_OK)
-    file = open(filename, "r")
-    content = file.read()
-    file.close()
+    #file = open(filename, "r")
+    #content = file.read()
+    #file.close()
+    content = pd.read_csv(filename, delimiter='\t')
+    assert isinstance(content, pd.DataFrame)
     return content
   
 def do_experiment():
@@ -23,8 +25,8 @@ def do_experiment():
 
 data_file = r"C:\Users\EVAK\OneDrive - Umeå universitet\Courses\2026_ProgrammingFormalisms\programming_formalisms_project_summer_2026\data\uppsala_tm_1722-2022.dat"
 content = read_non_empty_file(data_file)
-assert isinstance(content, pd.DataFrame)
-print(content)
+
+print(content.head())
 
 ##################### Exerecise 2 ################
 
