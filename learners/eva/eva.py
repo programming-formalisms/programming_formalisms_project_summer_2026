@@ -36,6 +36,8 @@ assert is_odd(3)
 def is_prime(num):
     """Checks if a number is a prime number. Return True is input is prime number, else False. Raises Type Error if input is not int
     """
+    if not isinstance(num, int):
+        raise TypeError("'num' must be of type int")
 
     def Prime(no, i):
         if no == i:
@@ -49,6 +51,14 @@ def is_prime(num):
 assert is_prime.__doc__
 assert is_prime(5)
 assert not is_prime(4)
+
+has_thrown = False
+try:
+    is_prime(0.0)
+except TypeError:
+    has_thrown = True
+assert has_thrown
+
 
 
 
