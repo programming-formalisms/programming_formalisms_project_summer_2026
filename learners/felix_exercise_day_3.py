@@ -41,3 +41,11 @@ try:
 except: 
     has_returned = True
 assert has_returned
+
+# Create the is_odd function, based on the is_even function.
+
+def is_odd(y):
+    """The function returns True if the given number is odd, else False."""
+    pass
+
+assert is_odd.__doc__
