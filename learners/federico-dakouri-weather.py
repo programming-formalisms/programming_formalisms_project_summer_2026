@@ -6,8 +6,19 @@ def file_exists(path: Path):
     return path.is_file()
 
 
-assert file_exists(Path("learners/federico-dakouri-weather.py"))
+assert file_exists(Path("data/uppsala_tm_1722-2022.dat"))
 assert not file_exists(Path("figure.png"))
+assert not file_exists(Path("statistics_results.txt"))
+
+
+def read_data(path: Path):
+    """Parse the input file."""
+    with open(path) as infile:
+        data = infile.read()
+    return data
+
+
+assert read_data(Path("data/uppsala_tm_1722-2022.dat"))
 
 
 def do_experiment():
