@@ -2,6 +2,8 @@ print()
 
 def is_even(n):
     """Determines if input is an even integer"""
+    if not isinstance(n, int):
+        raise TypeError('n must be an integer.')
     return n % 2 == 0
 
 assert is_even.__doc__
@@ -11,6 +13,14 @@ assert not is_even(3)
 has_thrown = False
 try:
     is_even('john')
+except TypeError:
+    has_thrown = True
+
+assert has_thrown
+
+has_thrown = False
+try:
+    is_even(1.2)
 except TypeError:
     has_thrown = True
 
