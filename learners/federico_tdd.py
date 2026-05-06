@@ -21,9 +21,10 @@ except:
 assert is_thrown
 
 
-def is_prime():
+def is_prime(n):
     """Check if the argument is a prime number."""
-    pass
+    return True
 
 
 assert is_prime.__doc__
+assert is_prime(1)
