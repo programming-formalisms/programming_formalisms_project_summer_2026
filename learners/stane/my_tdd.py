@@ -101,6 +101,9 @@ def is_prime(n:int):
     Raises TypeError is input is not an int
 
     """
+    if not isinstance(n, int):
+        raise TypeError("The input is not an int")
+
     if n <= 1:
         return False
     elif n == 2: 
@@ -109,6 +112,11 @@ def is_prime(n:int):
         return False
     if is_perfect_square_float(n):
         return False
+    i = 3
+    while i < n/2:
+        if n%i == 0:
+            return False
+        i+=1
     return True
 
 
@@ -118,3 +126,7 @@ assert not is_prime(1)
 assert is_prime(2)
 assert not is_prime(4)
 assert not is_prime(9)
+assert is_prime(17)
+assert not is_prime(33)
+assert not is_prime(68467)
+assert is_prime(68473)
