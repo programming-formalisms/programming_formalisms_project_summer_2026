@@ -20,3 +20,4 @@ def do_analysis():
 
 assert do_analysis.__doc__
 assert file_exists.__doc__
+assert not file_exists('sokfsdofjsd')
