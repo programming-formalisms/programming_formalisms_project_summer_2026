@@ -7,7 +7,8 @@ def read_non_empty_file(filename):
     #file = open(filename, "r")
     #content = file.read()
     #file.close()
-    content = pd.read_csv(filename, delimiter='\t')
+    #column_names = ['Year', 'Months', 'Day', 'Avg_temp', 'Avg_temp_corrected', 'Data_id_no']
+    content = pd.read_csv(filename, delimiter='\t')#, names=column_names)
     assert isinstance(content, pd.DataFrame)
     return content
   
@@ -25,8 +26,9 @@ def do_experiment():
 
 data_file = r"C:\Users\EVAK\OneDrive - Umeå universitet\Courses\2026_ProgrammingFormalisms\programming_formalisms_project_summer_2026\data\uppsala_tm_1722-2022.dat"
 content = read_non_empty_file(data_file)
+print(content.columns)
+assert (content.columns ==  ['Year', 'Months', 'Day', 'Avg_temp', 'Avg_temp_corrected', 'Data_id_no']).all()
 
-print(content.head())
 
 ##################### Exerecise 2 ################
 
