@@ -7,8 +7,7 @@ def file_exists(path: Path):
 
 
 assert file_exists(Path("data/uppsala_tm_1722-2022.dat"))
-assert not file_exists(Path("figure.png"))
-assert not file_exists(Path("statistics_results.txt"))
+assert not file_exists(Path("file_that_does_not_exist.txt"))
 
 
 def read_data(path: Path):
@@ -19,6 +18,17 @@ def read_data(path: Path):
 
 
 assert read_data(Path("data/uppsala_tm_1722-2022.dat"))
+
+
+def calculate_stats(data):
+    """Calculate statistics from the data."""
+    Path("statistics_results.txt").touch()
+
+
+data = read_data(Path("data/uppsala_tm_1722-2022.dat"))
+calculate_stats(data)
+
+assert file_exists(Path("statistics_results.txt"))
 
 
 def do_experiment():
