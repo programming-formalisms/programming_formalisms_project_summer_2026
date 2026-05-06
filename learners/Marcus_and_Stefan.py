@@ -40,11 +40,19 @@ except TypeError:
 assert has_thrown
 
 def is_odd(x):
+    """
+    Calcuclates if a number is odd by invertign hte resutls of the es_even function. 
+
+    Returns True of number is odd and False of number is even
+    """
+
     # Returns True if the input is odd
     # Returns False if the input is even
     # Gives an error when the input is not a number
 
     return not is_even(x)
+
+assert is_odd.__doc__
 
 
 
