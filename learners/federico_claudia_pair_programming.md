@@ -12,4 +12,4 @@ in case the scheme is test-driven development the switch should be task based, i
 switching should be time/energy based.
 
 What effects does pair programming have?
-Knowledge sharing, ongoing code review, two brains are better than one, collective code ownership.
+Knowledge sharing, ongoing code review, two brains are better than one, collective code ownership. prom
