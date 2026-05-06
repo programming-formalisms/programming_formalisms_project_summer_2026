@@ -109,3 +109,10 @@ try:
 except:
     thrown_exception = True
 assert thrown_exception
+
+# Next step might be to load the actuall data, and try to put together all the check functions into the get_seasonal_avg() function
+#       Or we can start wrting a main fanction that will do all the steps: Load, check format, do city filter, calculate average,...
+# Alternatively, we can implement checks on years (some reasonable range like 0-3000), months, days, temp (-50 to 50 ??)
+# Btw, it would be a good idea to check if the file is tab separated and path to file is valid
+
+assert is_valid_tsv.__doc__
