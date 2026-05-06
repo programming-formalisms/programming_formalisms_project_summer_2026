@@ -6,6 +6,9 @@ def file_exists(file_path):
     pass
 
 def do_experiment():
+    """
+    Perform experiment
+    """
     # Read the data
     # Do the statistics
     # Save the statistics results to file
