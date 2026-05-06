@@ -66,3 +66,8 @@ assert has_given
 
 # Create the is_prime function
 
+def is_prime(z):
+    """Function returns True if y is a prime number, else False."""
+    pass
+
+assert is_prime.__doc__
