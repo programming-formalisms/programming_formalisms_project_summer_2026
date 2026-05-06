@@ -21,16 +21,20 @@ except:
 assert is_thrown
 
 
-def is_prime(n):
+def is_prime(n, d=2):
     """Check if the argument is a prime number."""
-    if n == 1:
-        return True
-    elif n % 2 == 0:
-        return True
-    else:
+    if n < 2:
         return False
+    elif n == d:
+        return True
+    elif n % d == 0:
+        return False
+    else:
+        return is_prime(n, d + 1)
 
 
 assert is_prime.__doc__
-assert is_prime(1)
+assert not is_prime(1)
 assert is_prime(2)
+assert is_prime(3)
+assert not is_prime(4)
