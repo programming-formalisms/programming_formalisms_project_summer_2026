@@ -4,7 +4,7 @@ from scipy import stats
 from pathlib import Path
 
 
-def file_exists(path: Path):
+def file_exists_bis(path: Path):
     """Check that the file exists."""
     return path.is_file()
 
