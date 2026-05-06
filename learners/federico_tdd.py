@@ -23,6 +23,8 @@ assert is_thrown
 
 def is_prime(n, d=2):
     """Check if the argument is a prime number."""
+    if not isinstance(n, int):
+        raise TypeError("'n' must be an integer!")
     if n < 2:
         return False
     elif n == d:
@@ -38,3 +40,10 @@ assert not is_prime(1)
 assert is_prime(2)
 assert is_prime(3)
 assert not is_prime(4)
+
+has_thrown = False
+try:
+    is_prime(1.4)
+except TypeError as e:
+    has_thrown = True
+assert has_thrown
