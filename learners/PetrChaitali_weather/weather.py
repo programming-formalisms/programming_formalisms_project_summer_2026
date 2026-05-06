@@ -22,7 +22,9 @@ def get_seasonal_avg(x):
         return False
     return True
 
+data = pd.DataFrame.from_dict({'Col1':[1,2,3], 'Col2':[4,5,6]})
 assert get_seasonal_avg.__doc__
 assert is_dataframe.__doc__
 assert table_to_df.__doc__
 assert is_dataframe(data)
+assert not is_dataframe('oiabroibgao')
