@@ -25,6 +25,8 @@ class InvalidColumnTypeError(MyError):
     """Raised when column is not present or do not contain expected data type"""
     pass
 
+weather_data = "../../data/uppsala_tm_1722-2022.dat"
+
 city_dict = {
     "Uppsala"           :   1,
     "Risinge"           :   2,
@@ -91,15 +93,19 @@ def get_seasonal_avg(x):
         return False
     return True
 
-data = pd.DataFrame.from_dict({'Col1':[1,2,3], 'Col2':[4,5,6]})
 test_df = pd.DataFrame.from_dict({'Col1':[1984,1985,1986], 'Col2':[4,5,6], 'Col3':[10,5,26], 'Col4':[10.4,12.7,22.1], 'Col5':[10.1,12.9,21.4],'Col6':[1,2,1]})
 assert get_seasonal_avg.__doc__
 assert is_dataframe.__doc__
 assert table_to_df.__doc__
-assert is_dataframe(data)
+assert is_dataframe(test_df)
 assert not is_dataframe('oiabroibgao')
 assert is_weatherData.__doc__
 assert is_weatherData(test_df)
-
-##maybe now we can filter for city
 assert city_filter.__doc__
+assert city_filter(test_df, "Uppsala", city_dict)
+thrown_exception = False
+try:
+    city_filter(test_df, "UPPSALLA", city_dict)
+except:
+    thrown_exception = True
+assert thrown_exception
