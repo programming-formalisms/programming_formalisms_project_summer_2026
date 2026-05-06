@@ -54,7 +54,18 @@ def is_odd(x):
 
 assert is_odd.__doc__
 
+import pandas as pd
 
-
-
-
+def do_experiment():
+  # Read the data
+  col_names = ["Year", "Month", "Day", "Avg_temp", "Avg_temp_urb_correct", "Location"]
+  df = pd.read_csv("/Users/wenne/Documents/programing_formalisms/programming_formalisms_project_summer_2026/data/uppsala_tm_1722-2022.dat", 
+   names = col_names, sep=r"\s+")
+  print(df.head())
+  # Do the statistics
+  # Save the statistics results to file
+  #assert file_exists("figure.png")
+  # Create the figure
+  # Save the figure to file
+  #assert file_exists("statistics_results.txt")
+do_experiment()
