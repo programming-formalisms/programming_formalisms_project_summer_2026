@@ -1,5 +1,5 @@
 def is_zero(n):
-    """Function to test if the argument is zero."""
+    """Test if the argument is zero."""
     if not isinstance(n, int):
         raise TypeError("'n' is not an integer")
     if n == 0:
@@ -17,4 +17,13 @@ try:
     is_zero("zero")
 except:
     is_thrown = True
+
 assert is_thrown
+
+
+def is_prime():
+    """Check if the argument is a prime number."""
+    pass
+
+
+assert is_prime.__doc__
