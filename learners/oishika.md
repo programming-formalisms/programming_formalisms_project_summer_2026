@@ -76,6 +76,7 @@ def is_prime(x):
     Check whether the input is a prime number!
     """
     assert x > 1
+    assert isinstance(x, int)
     pass
     
 assert is_prime.__doc__
