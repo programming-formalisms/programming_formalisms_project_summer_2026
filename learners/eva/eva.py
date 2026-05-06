@@ -1,3 +1,33 @@
+################ Exercise 6 ########################
+import pandas as pd
+def read_non_empty_file(filename):
+    import os
+    assert os.path.isfile(filename)
+    assert os.access(filename, os.R_OK)
+    file = open(filename, "r")
+    content = file.read()
+    file.close()
+    return content
+  
+def do_experiment():
+  # Read the data
+  data_file = r"C:\Users\EVAK\OneDrive - Umeå universitet\Courses\2026_ProgrammingFormalisms\programming_formalisms_project_summer_2026\data\uppsala_tm_1722-2022.dat"
+  content = read_non_empty_file(data_file)
+  # Do the statistics
+  # Save the statistics results to file
+  assert file_exists("figure.png")
+  # Create the figure
+  # Save the figure to file
+  assert file_exists("statistics_results.txt")
+
+
+data_file = r"C:\Users\EVAK\OneDrive - Umeå universitet\Courses\2026_ProgrammingFormalisms\programming_formalisms_project_summer_2026\data\uppsala_tm_1722-2022.dat"
+content = read_non_empty_file(data_file)
+assert isinstance(content, pd.DataFrame)
+print(content)
+
+##################### Exerecise 2 ################
+
 def is_even(num):
     """Check if input number is even. Retrun True is number is even, otherwise false. Raises an error when input is not a number.
     """
