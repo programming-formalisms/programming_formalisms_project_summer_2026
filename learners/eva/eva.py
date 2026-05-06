@@ -1,3 +1,14 @@
+def is_even():
+    """Check if input number is even. Retrun True is number is even, otherwise false. Raises an error when input is not a number.
+    """
+    pass
+
+assert is_even.__doc__
+
+
+
+
+
 def is_zero(num):
     """Check if input is zero. Return True if zero, False otherwise, Raises error if not a number.
     """
