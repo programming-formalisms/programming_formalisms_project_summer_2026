@@ -29,6 +29,17 @@ def is_odd(num):
 
 assert is_odd.__doc__
 assert is_odd(3)
+#assert not is_odd(2) #not valid test since it already passes
+
+############## Exercise 4 ################
+
+def is_prime():
+    """Checks if a number is a prime number. Return True is input is prime number, else False. Raises Type Error if input is not int
+    """
+    pass
+
+assert is_prime.__doc__
+
 
 
 
