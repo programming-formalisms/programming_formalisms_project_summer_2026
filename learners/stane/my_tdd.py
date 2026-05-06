@@ -9,7 +9,8 @@ def is_zero(testnum: int):
     Rarises TypeError is input is not flat or int
 
     """
-    return True
+    return True if testnum == 0 else False
 
 assert is_zero(0).__doc__
 assert is_zero(0) 
+assert not is_zero(1)
