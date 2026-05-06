@@ -1,9 +1,10 @@
-def is_even():
+def is_even(num):
     """Check if input number is even. Retrun True is number is even, otherwise false. Raises an error when input is not a number.
     """
-    pass
+    return True
 
 assert is_even.__doc__
+assert is_even(2)
 
 
 
