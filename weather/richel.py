@@ -2,8 +2,7 @@
 
 from scipy import stats
 
-def is_zero(): pass
-    
+
 def get_name():
     """Get Richel's name, spelled correctly."""
     return "Richèl"
