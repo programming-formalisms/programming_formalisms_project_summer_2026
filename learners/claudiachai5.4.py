@@ -5,23 +5,19 @@ def is_prime(x):
     except:
         return False
     
-    list_100=[1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+    list_100=[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     prime=False
 
     if x == 0:
         return False
+    elif x == 1:
+        return True
     else:
         for i in list_100:
-            if x == i:
-                prime=True
-                return True 
-            else:
-                continue
-
-            if prime == False:
-                if x % i == 0:
-                    print ('This can be divided by %s' %i)
-                    return False 
+            if x % i == 0 and x != i:
+                print ('This can be divided by %s' %i)
+                return False
+    return True
 
 #    else:
 #        return True
