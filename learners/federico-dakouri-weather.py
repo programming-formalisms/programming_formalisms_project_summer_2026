@@ -17,29 +17,30 @@ def read_data(path: Path):
     return data
 
 
-assert read_data(Path("data/uppsala_tm_1722-2022.dat"))
-
-
 def calculate_stats(data):
     """Calculate statistics from the data."""
-    Path("statistics_results.txt").touch()
+    return data
 
 
-data = read_data(Path("data/uppsala_tm_1722-2022.dat"))
-calculate_stats(data)
-
-assert file_exists(Path("statistics_results.txt"))
+def save_stats_to_file(data, path: Path):
+    """Save the statistics to file."""
+    with open(path, "w") as outfile:
+        outfile.write(data)
 
 
 def do_experiment():
     # Read the data
+    data = read_data(Path("data/uppsala_tm_1722-2022.dat"))
+    assert data
     # Do the statistics
+    stats = calculate_stats(data)
+    assert stats
     # Save the statistics results to file
-    # assert file_exists(Path("figure.png"))
+    save_stats_to_file(stats, Path("statistics_results.txt"))
+    assert file_exists(Path("statistics_results.txt"))
     # Create the figure
     # Save the figure to file
     # assert file_exists(Path("statistics_results.txt"))
-    pass
 
 
 do_experiment()
