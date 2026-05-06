@@ -130,3 +130,21 @@ assert is_prime(17)
 assert not is_prime(33)
 assert not is_prime(68467)
 assert is_prime(68473)
+
+# Exercise 5.5
+# My favorite function 
+# DNA-sequence aligner function
+def align(seq: str, ref: str):
+
+
+    # out = {
+    #     "aligned"   : True,
+    #     "pos"       : 1,
+    #     "qual"      : 100
+    # }
+    return True
+
+assert align("GATATATA", "CGCGCGGATATATAGCGCGCAATT").__doc__
+assert align("GATATATA", "CGCGCGGATATATAGCGCGCAATT")
+
+print(len(".png") < 5)
