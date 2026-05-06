@@ -1,4 +1,12 @@
 
+
+
+def is_string(s):
+    return True
+
+assert not is_string(314)
+
+
 def int_to_roman(x):
     '''
     Convert a integer to a roman numeral.
