@@ -39,3 +39,14 @@ except TypeError:
     has_thrown = True
 assert has_thrown
 
+def is_odd(x):
+    # Returns True if the input is odd
+    # Returns False if the input is even
+    # Gives an error when the input is not a number
+
+    return not is_even(x)
+
+
+
+
+
