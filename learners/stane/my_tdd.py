@@ -22,3 +22,18 @@ try:
 except:
     has_thrown = True
 assert has_thrown
+
+# Exercise 5.2
+
+def is_even(testnum: int) -> bool:
+    """
+    This function accepts one argument that should be a float or an interger
+
+    Returns True if input is even number,
+    Returns False if input is odd number or zero,
+    Rarises TypeError is input is not float or int
+
+    """
+    return True
+
+assert is_even(0).__doc__
