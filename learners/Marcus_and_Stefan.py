@@ -25,8 +25,12 @@ def clean_data(raw_data):
     pass
 
 def create_statisics_file(input_file, output_path):
+    """
+    The statistics will be performed by focus on the wealth data during the summer and winter, 
+    generate a data frame with P valve and regression data. 
+    """
     with open(output_path, 'w') as fp:
-        return
+        return 
 
 def do_experiment():
     """
