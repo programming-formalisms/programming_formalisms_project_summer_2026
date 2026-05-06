@@ -9,7 +9,7 @@ def is_zero(x=None):
     return False
 
 
-def is_even():
+def is_even(number):
     """
     Checks if number is even.
 
@@ -17,10 +17,16 @@ def is_even():
     else return False.
 
     """
+    modulus_return = number % 2
 
-    pass
+    if modulus_return == 0:
+        return True
+    else:
+        return False
+    
     # Returns True if the input is even
     # Returns False if the input is not even
     # Gives an error when the input is not a number
 assert is_even.__doc__
+assert is_even(2)
 
