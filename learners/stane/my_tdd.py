@@ -3,6 +3,12 @@ def is_number(testnum):
     if not isinstance(testnum, (float,int)):
         raise TypeError("Input must be of type int or float")
 
+def is_perfect_square_float(n: int) -> bool:
+    import math
+    if n < 0:
+        return False
+    return math.sqrt(n).is_integer()
+
 # Exercise 5.1
 def is_zero(testnum: int) -> bool:
     """
@@ -86,6 +92,7 @@ assert has_thrown
 
 # Exercise 5.4
 def is_prime(n:int):
+    import math
     """
     This function accepts one argument that should be an interger
 
@@ -96,7 +103,18 @@ def is_prime(n:int):
     """
     if n <= 1:
         return False
+    elif n == 2: 
+        return True
+    elif is_even(n):
+        return False
+    if is_perfect_square_float(n):
+        return False
     return True
 
-assert is_prime(0).__doc__
 
+assert is_prime(0).__doc__
+assert not is_prime(0)
+assert not is_prime(1)
+assert is_prime(2)
+assert not is_prime(4)
+assert not is_prime(9)
