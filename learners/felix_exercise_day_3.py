@@ -31,3 +31,4 @@ def is_even(a):
 
 assert is_even.__doc__
 assert is_even(2) == True
+assert is_even(1) == False
