@@ -22,9 +22,11 @@ assert has_thrown
 
 # Create is_even function
 
-def is_even(a):
+def is_even(x):
     """The function tests if a given number is even."""
-    if (a % 2 == 0):
+    if not isinstance(x, int):
+        raise TypeError("a must be of type Integer")
+    if (x % 2 == 0):
         return True
     else:
         return False
@@ -32,3 +34,10 @@ def is_even(a):
 assert is_even.__doc__
 assert is_even(2) == True
 assert is_even(1) == False
+
+has_returned = False
+try: 
+    is_even("nonsense")
+except: 
+    has_returned = True
+assert has_returned
