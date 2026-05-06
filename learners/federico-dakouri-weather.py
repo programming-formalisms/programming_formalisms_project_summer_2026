@@ -28,6 +28,11 @@ def save_stats_to_file(data, path: Path):
         outfile.write(data)
 
 
+def prepare_data_for_plotting(stats):
+    """Prepare data for plotting."""
+    return stats
+
+
 def do_experiment():
     # Read the data
     data = read_data(Path("data/uppsala_tm_1722-2022.dat"))
@@ -39,8 +44,10 @@ def do_experiment():
     save_stats_to_file(stats, Path("statistics_results.txt"))
     assert file_exists(Path("statistics_results.txt"))
     # Create the figure
+    plot_data = prepare_data_for_plotting(stats)
+    assert plot_data
     # Save the figure to file
-    # assert file_exists(Path("statistics_results.txt"))
+    assert file_exists(Path("figure.png"))
 
 
 do_experiment()
