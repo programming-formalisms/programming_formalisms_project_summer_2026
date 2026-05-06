@@ -20,8 +20,29 @@ except:
 assert has_thrown
 
 
-def is_even():
+def is_even(x):
     """checks if number is even, returns True if yes, False if no"""
-    pass
+    if not isinstance(x, int):
+        raise TypeError("'x' must be of type int")
+    return x % 2 == 0
 
 assert is_even.__doc__
+assert is_even(2)
+assert not is_even(1)
+
+has_thrown = False
+try:   
+    is_even(0.0)
+except TypeError:
+    has_thrown = True
+assert has_thrown
+
+
+
+def is_odd(x):
+    """Checks if number is odd and returns True, otherwise False"""
+    return not is_even(x)
+
+assert is_odd.__doc__
+assert is_odd(1)
+assert not is_odd(2)

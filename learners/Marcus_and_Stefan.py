@@ -1,15 +1,10 @@
-def is_zero(x):
-    """Determines if the input is one integer that is zero"""
-    if not isinstance(x, int):
-        raise TypeError("'x' must be of type int")
-    if x == 0:
-        return True
-    return False
+def do_experiment():
+  # Read the data
+  # Do the statistics
+  # Save the statistics results to file
+  assert file_exists("figure.png")
+  # Create the figure
+  # Save the figure to file
+  assert file_exists("statistics_results.txt")
 
-
-
-
-
-# Returns True if the input is even
-# Returns False if the input is not even
-# Gives an error when the input is not a number
+assert do_experiment.__doc__
