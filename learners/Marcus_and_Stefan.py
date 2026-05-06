@@ -12,8 +12,13 @@ def is_zero(x=None):
 def is_even():
     """
     Checks if number is even.
+
+    Returns True of value is even,
+    else return False.
+
     """
 
     pass
 
 assert is_even.__doc__
+
