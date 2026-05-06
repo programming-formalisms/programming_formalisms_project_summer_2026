@@ -31,5 +31,11 @@ def is_even(number):
     # Gives an error when the input is not a number
 assert is_even.__doc__
 assert is_even(2)
-assert is_even("apple")
+
+has_thrown = False
+try:
+    is_even("nonsense")
+except TypeError:
+    has_thrown = True
+assert has_thrown
 
