@@ -38,11 +38,12 @@ def is_even(testnum: int) -> bool:
     Rarises TypeError is input is not float or int
 
     """
-    if testnum%2 == 0:
-        return True
+    if testnum == 0 or testnum%2 != 0:
+        return False
     else:
-        return 0
+        return True
 
 assert is_even(0).__doc__
 assert is_even(2)
 assert not is_even(5)
+assert not is_even(0)
