@@ -21,6 +21,9 @@ def read_data(filename):
     )
     return content
 
+def extract_stats(content):
+    data="stats"
+    return data
 
 assert list(read_data("data/uppsala_tm_1722-2022.dat").columns) == [
     "Year",
