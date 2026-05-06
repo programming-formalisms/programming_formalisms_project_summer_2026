@@ -17,6 +17,8 @@ def is_even(number):
     else return False.
 
     """
+    if not isinstance(number, int):
+        raise TypeError("'Number' must be of type int")
     modulus_return = number % 2
 
     if modulus_return == 0:
@@ -29,4 +31,11 @@ def is_even(number):
     # Gives an error when the input is not a number
 assert is_even.__doc__
 assert is_even(2)
+
+has_thrown = False
+try:
+    is_even("nonsense")
+except TypeError:
+    has_thrown = True
+assert has_thrown
 

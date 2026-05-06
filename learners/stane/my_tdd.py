@@ -29,7 +29,7 @@ assert has_thrown
 
 # Exercise 5.2
 
-def is_even(testnum: int) -> bool:
+def is_even(testnum: int):
     """
     This function accepts one argument that should be a float or an interger
 
@@ -38,11 +38,21 @@ def is_even(testnum: int) -> bool:
     Rarises TypeError is input is not float or int
 
     """
-    if testnum%2 == 0:
+    is_number(testnum)
+    if testnum == 0 or testnum%2 != 0:
+        return False
+    elif testnum%2 == 0:
         return True
     else:
-        return 0
+        raise ValueError("The input is neither even nor odd number")
 
 assert is_even(0).__doc__
 assert is_even(2)
 assert not is_even(5)
+assert not is_even(0)
+has_thrown = False
+try:
+    is_even('somestring')
+except:
+    has_thrown = True
+assert has_thrown
