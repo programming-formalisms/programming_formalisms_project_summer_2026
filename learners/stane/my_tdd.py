@@ -37,3 +37,4 @@ def is_even(testnum: int) -> bool:
     return True
 
 assert is_even(0).__doc__
+assert is_even(2)
