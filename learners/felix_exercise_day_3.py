@@ -66,8 +66,28 @@ assert has_given
 
 # Create the is_prime function
 
+import math
+
 def is_prime(z):
     """Function returns True if y is a prime number, else False."""
-    pass
 
+    if z < 2:
+        return False
+    
+    elif z == 2: 
+        return True
+    
+    elif is_even(z) == True:
+        return False
+
+    else:
+        for i in range(3, int(z**0.5) + 1, 2):
+            if (z % i == 0):
+                return False
+    
+    return True
+    
 assert is_prime.__doc__
+assert is_prime(3) == True
+assert is_prime(7) == True
+assert is_prime(8) == False
