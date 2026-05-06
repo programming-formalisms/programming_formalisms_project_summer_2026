@@ -66,3 +66,15 @@ R100.2        |Decisions are adopted                                            
 # A comment line.
 # Just an edit!
 # ! Just a commit message
+
+#TDD
+def is_prime():
+    """
+    Check whether the input is a prime number!
+    """
+    pass
+    # assert x >= 0
+    # for i in range(2,x):
+    #     if x % i != 0:
+    #         return True
+assert is_prime.__doc__
