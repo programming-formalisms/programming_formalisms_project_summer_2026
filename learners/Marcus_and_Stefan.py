@@ -1,71 +1,10 @@
-def is_zero(x=None):
-    """Determines if the input is one integer that is zero"""
-    if x == None:
-        raise TypeError("No value assinged")
-    if not isinstance(x, int):
-        raise TypeError("'x' must be of type int")
-    if x == 0:
-        return True
-    return False
-
-
-def is_even(number):
-    """
-    Checks if number is even.
-
-    Returns True of value is even,
-    else return False.
-
-    """
-    if not isinstance(number, int):
-        raise TypeError("'Number' must be of type int")
-    modulus_return = number % 2
-
-    if modulus_return == 0:
-        return True
-    else:
-        return False
-    
-    # Returns True if the input is even
-    # Returns False if the input is not even
-    # Gives an error when the input is not a number
-assert is_even.__doc__
-assert is_even(2)
-
-has_thrown = False
-try:
-    is_even("nonsense")
-except TypeError:
-    has_thrown = True
-assert has_thrown
-
-def is_odd(x):
-    """
-    Calcuclates if a number is odd by invertign hte resutls of the es_even function. 
-
-    Returns True of number is odd and False of number is even
-    """
-
-    # Returns True if the input is odd
-    # Returns False if the input is even
-    # Gives an error when the input is not a number
-
-    return not is_even(x)
-
-assert is_odd.__doc__
-
-import pandas as pd
-
 def do_experiment():
   # Read the data
-  col_names = ["Year", "Month", "Day", "Avg_temp", "Avg_temp_urb_correct", "Location"]
-  df = pd.read_csv("/Users/wenne/Documents/programing_formalisms/programming_formalisms_project_summer_2026/data/uppsala_tm_1722-2022.dat", 
-   names = col_names, sep=r"\s+")
-  print(df.head())
   # Do the statistics
   # Save the statistics results to file
-  #assert file_exists("figure.png")
+  assert file_exists("figure.png")
   # Create the figure
   # Save the figure to file
-  #assert file_exists("statistics_results.txt")
-do_experiment()
+  assert file_exists("statistics_results.txt")
+
+assert do_experiment.__doc__
