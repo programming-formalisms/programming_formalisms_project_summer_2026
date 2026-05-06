@@ -49,4 +49,35 @@ try:
 except TypeError:
     pass
 
+def is_prime(x):
+    if not isinstance(x, int):
+        raise TypeError("Input must be one number")
+
+    if x < 2:
+        return False
+
+    for i in range(2, x):
+        if x % i == 0:
+            return False
+
+    return True
+
+# tests for is_prime
+assert is_prime(2) == True
+assert is_prime(3) == True
+assert is_prime(5) == True
+assert is_prime(7) == True
+
+assert is_prime(1) == False
+assert is_prime(4) == False
+assert is_prime(6) == False
+assert is_prime(9) == False
+assert is_prime(10) == False
+
+try:
+    is_prime("7")
+    assert False
+except TypeError:
+    pass
+
 print("All tests passed!")
