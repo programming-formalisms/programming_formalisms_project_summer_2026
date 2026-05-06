@@ -1,9 +1,14 @@
 """Richel's code."""
 
 from scipy import stats
+from pathlib import Path
 
-def is_zero(): pass
-    
+
+def file_exists(path: Path):
+    """Check that the file exists."""
+    return path.is_file()
+
+
 def get_name():
     """Get Richel's name, spelled correctly."""
     return "Richèl"
