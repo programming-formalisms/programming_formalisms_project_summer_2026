@@ -19,3 +19,11 @@ try:
 except: 
     has_thrown = True
 assert has_thrown
+
+# Create is_even function
+
+def is_even():
+    """The function tests if a given number is even."""
+    pass
+
+assert is_even.__doc__
