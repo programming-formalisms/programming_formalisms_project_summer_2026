@@ -1,3 +1,8 @@
+# Helper funtions
+def is_number(testnum):
+    if not isinstance(testnum, (float,int)):
+        raise TypeError("Input must be of type int or float")
+
 # Exercise 5.1
 
 def is_zero(testnum: int) -> bool:
@@ -9,8 +14,7 @@ def is_zero(testnum: int) -> bool:
     Rarises TypeError is input is not float or int
 
     """
-    if not isinstance(testnum, (float,int)):
-        raise TypeError("Input must be of type int or float")
+    is_number(testnum)
     return True if testnum == 0 else False
 
 assert is_zero(0).__doc__
@@ -34,7 +38,11 @@ def is_even(testnum: int) -> bool:
     Rarises TypeError is input is not float or int
 
     """
-    return True
+    if testnum%2 == 0:
+        return True
+    else:
+        return 0
 
 assert is_even(0).__doc__
 assert is_even(2)
+assert not is_even(5)
