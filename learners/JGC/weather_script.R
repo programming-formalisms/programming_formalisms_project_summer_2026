@@ -19,3 +19,4 @@ do_experiment <- function() {
 
 files <- list.files("~/programming_formalisms_project_summer_2026/programming_formalisms_project_summer_2026/learners/JGC/")  
 "regression.txt" %in% files == TRUE
+"plot.png" %in% files == T
