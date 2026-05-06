@@ -6,3 +6,4 @@ Take breaks and agree on a schedule beforehand. Plan the task a bit beforehand. 
 When to switch roles? Give a procedure
 Fixing the time (e.g. 5 minutes). Solve test, design test -> switch.
 What effects does pair programming have?
+Good for learning purposes and time consumption.
