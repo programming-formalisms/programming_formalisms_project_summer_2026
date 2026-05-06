@@ -33,12 +33,13 @@ assert is_odd(3)
 
 ############## Exercise 4 ################
 
-def is_prime():
+def is_prime(num):
     """Checks if a number is a prime number. Return True is input is prime number, else False. Raises Type Error if input is not int
     """
-    pass
+    return True
 
 assert is_prime.__doc__
+assert is_prime(5)
 
 
 
