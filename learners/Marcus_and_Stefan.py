@@ -10,5 +10,10 @@ def is_zero(x=None):
 
 
 def is_even():
+    """
+    Checks if number is even.
+    """
 
     pass
+
+assert is_even.__doc__
