@@ -19,6 +19,8 @@ def is_even():
     """
 
     pass
-
+    # Returns True if the input is even
+    # Returns False if the input is not even
+    # Gives an error when the input is not a number
 assert is_even.__doc__
 
