@@ -46,6 +46,8 @@ assert has_returned
 
 def is_odd(y):
     """The function returns True if the given number is odd, else False."""
+    if not isinstance(y, int):
+        raise TypeError("y must be of type Integer")
     if is_even(y) == True:
         return False
     else:
@@ -54,3 +56,13 @@ def is_odd(y):
 assert is_odd.__doc__
 assert is_odd(1) == True
 assert is_odd(2) == False
+
+has_given = False
+try: 
+    is_odd("nonsense")
+except: 
+    has_given = True
+assert has_given
+
+# Create the is_prime function
+
