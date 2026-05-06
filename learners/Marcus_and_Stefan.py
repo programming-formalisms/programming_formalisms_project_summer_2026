@@ -48,5 +48,6 @@ do_experiment()
 assert do_experiment.__doc__
 assert file_exists.__doc__
 assert generate_figure.__doc__
+assert create_statisics_file.__doc__
 assert file_exists("/Users/wenne/Documents/programing_formalisms/programming_formalisms_project_summer_2026/learners/grp6_nicolas_marcus/figure.png")
 assert file_exists("/Users/wenne/Documents/programing_formalisms/programming_formalisms_project_summer_2026/learners/grp6_nicolas_marcus/statistics_results.txt")
