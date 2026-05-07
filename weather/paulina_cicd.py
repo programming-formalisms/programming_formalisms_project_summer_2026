@@ -1,10 +1,11 @@
+"""Test function."""
 def get_mean(l):
-    """Compute the mean of list of numbers"""
+    """Compute the mean of list of numbers."""
     if not isinstance(l, list):
-        raise TypeError("'l' must be a list.")
+        raise TypeError("need list.")
     
     if len(l) == 0:
-        raise ValueError("Length of 'l' should be greater than 0.")
+        raise ValueError("Length > 0.")
     mean = sum(l) / len(l)
     return mean
 
@@ -16,7 +17,7 @@ try:
 except TypeError:
     has_thrown = True
 assert has_thrown
-    
+ 
 assert isinstance([1], list)
 
 assert get_mean([1]) == 1
