@@ -1,1 +1,1 @@
-"""Code for the 'weather' package."""
+krizia_error=1
