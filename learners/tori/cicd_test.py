@@ -23,7 +23,7 @@ def read_data(filename):
 
 def extract_stats(content)
     data=pd.DataFrame(columns="year, day, month, avg_temp, avg_temp_fix, location")
-    return data
+    return nothing
 
 assert list(read_data("data/uppsala_tm_1722-2022.dat").columns) == [
     "Year",
