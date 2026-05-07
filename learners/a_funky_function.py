@@ -4,6 +4,8 @@ def funky(s, filename, num):
     Args:
         x (_type_): _description_
     """
+
+    f = open(filename, 'w')
     return True
 
 
@@ -12,3 +14,6 @@ assert funky('funky', test_filename, 3)
 
 import os
 assert os.path.exists(test_filename)
+with open(test_filename) as f:
+    lines = f.readlines()
+assert len(lines)>0
