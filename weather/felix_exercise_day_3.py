@@ -3,13 +3,13 @@
 # do_experiment() # Should return a figure and a txt file
 
 def create_png(a):
-    """Creates a png file."""
+    """Create a png file."""
     pass
 
 assert create_png.__doc__
 
 def file_exists(a):
-    """Returns True if a file exists, else False."""
+    """Return True if a file exists, else False."""
     import os
     if (os.path.isfile(a) == True):
         return True
@@ -19,7 +19,7 @@ def file_exists(a):
 assert file_exists.__doc__
 
 def do_experiment(a):
-    """Takes a .dat file as input, returns a figure and a statistics file."""
+    """Take a .dat file as input, return a figure and a statistics file."""
     # Create a statistics .txt file
     # Create a png file
     pass
