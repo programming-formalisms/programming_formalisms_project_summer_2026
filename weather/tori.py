@@ -58,6 +58,7 @@ def do_experiment(file):
     assert not data.empty
     statistic = get_regression(content)
     assert isinstance(statistic, float)
+    assert file_exists("plot.png")
     # Save the statistics results to file
     assert file_exists("statistics_results.txt")
     # Create the figure
