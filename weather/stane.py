@@ -113,7 +113,7 @@ test_df = pd.DataFrame.from_dict({"Col1":[1984,1985,1986],
                                   "Col2":[4,5,6], "Col3":[10,5,26],
                                   "Col4":[10.4,12.7,22.1],
                                   "Col5":[10.1,12.9,21.4],
-                                  "Col6":[1,2,1]})
+                                  "city":[1,2,1]})
 def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
     """Filter rows by city using the 6th column.
 
@@ -124,7 +124,7 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
     if col_count != INPUT_COLUMN_COUNT:
         msg = f"Expected 6 columns; Received {col_count}"
         raise InvalidColumnCountError(msg)
-    if city not in city_dict:
+    if city not in cities:
         msg = f"{city} is not defined, defined cities are: {cities}"
         raise InvalidCityError(msg)
     if "city" not in df.columns:
@@ -183,16 +183,16 @@ def write_output(df, filename="output.csv"):
 
     return True
 
-assert city_filter(test_df, "Uppsala",city_dict)
+assert isinstance(city_filter(test_df, "Uppsala", city_dict), pd.DataFrame)
 thrown_ex = False
 try:
-    city_filter(test_df[["Col1", "Col2"]],"Uppsala",city_dict)
+    city_filter(test_df[["Col1", "Col2"]],"Uppsala", city_dict)
 except InvalidColumnCountError:
     thrown_ex = True
 assert thrown_ex
 thrown_ex = False
 try:
-    city_filter(test_df,"Uppsalalala",city_dict)
-except InvalidColumnCountError:
+    city_filter(test_df,"Uppsalalala", city_dict)
+except InvalidCityError:
     thrown_ex = True
 assert thrown_ex
