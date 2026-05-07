@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
-import pandas as pd
 import numpy as np
+
 
 def plot_century_bars(yearly_df):
     summary = (

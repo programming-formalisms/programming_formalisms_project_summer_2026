@@ -1,6 +1,7 @@
 # chai_divide_by.py
 import sys
 
+
 def divide_by(numerator, denominator):
     value = numerator / denominator
     return value

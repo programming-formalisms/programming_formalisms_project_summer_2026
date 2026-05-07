@@ -9,9 +9,8 @@ assert not is_string(314)
 
 
 def int_to_roman(x):
-    '''
-    Convert a integer to a roman numeral.
-    '''
+    """Convert a integer to a roman numeral.
+    """
     return "I"
 
 assert int_to_roman.__doc__

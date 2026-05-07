@@ -8,10 +8,9 @@ def is_odd(n):
             raise ValueError("Input must be an integer or a string that can be converted to an integer.")
     if n % 2 == 0:
         return False
-    else:
-        return True
-    
-assert is_odd.__doc__ 
+    return True
+
+assert is_odd.__doc__
 assert is_odd(1) == True
 assert is_odd(2) == False
 assert is_odd("1") == True
