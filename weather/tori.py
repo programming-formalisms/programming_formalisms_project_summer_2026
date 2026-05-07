@@ -1,5 +1,5 @@
 def extract_stats(content):
-    data="stats"
-    return nothing
+    content="stats"
+    return content
 
-extract_stats(hahah)
+extract_stats("hahah")
