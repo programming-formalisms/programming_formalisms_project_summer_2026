@@ -1,16 +1,14 @@
-"""
-This is marcus test script. Lets fix it!
-"""
+"""Marcus test script. Lets fix it."""
 
 import os
 import matplotlib.pyplot as plt
 
-list_path = ["/Users/wenne/Documents/programing_formalisms/", 
+list_path = ["/Users/wenne/Documents/programing_formalisms/",
     "programming_formalisms_project_summer_2026/learners/grp6_nicolas_marcus/statistics_results.txt"]
 path_stats_out =  "".join(list_path)
 
-list_path_fig = ["/Users/wenne/Documents/programing_formalisms/", 
-                     "programming_formalisms_project_summer_2026/", 
+list_path_fig = ["/Users/wenne/Documents/programing_formalisms/",
+                     "programming_formalisms_project_summer_2026/",
                      "learners/grp6_nicolas_marcus/figure.png"]
 path_fig_out = "".join(list_path_fig)
 
@@ -32,7 +30,7 @@ def generate_figure(data):
 
 def clean_data():
     """
-    Divide the data into mean temperature for the summer and winter each complete year in Uppsala.
+    Divide the data into relevant categories.
 
     Summer = Jun - Aug.
     Winter = Nov - Feb.
@@ -42,7 +40,7 @@ def clean_data():
 def create_statisics_file(data, output_path):
     """
     Generate statiscs.
-    
+
     The statistics will be performed by focus on the wealth
     data during the summer and winter, generate
     a data frame with P valve and regression data.
@@ -60,7 +58,7 @@ def do_experiment():
     # Create the figure
     generate_figure(data)
     create_statisics_file(data, path_stats_out)
-    # Save the figure to file 
+    # Save the figure to file
 
 do_experiment()
 assert do_experiment.__doc__
