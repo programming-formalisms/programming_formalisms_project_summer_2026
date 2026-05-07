@@ -1,8 +1,5 @@
-# When done, this should provide all tool to:
-# load,
-# preprocess ,
-# analyse, and
-# visualize Uppsala weather data
+
+"""When done, this module will load, analyse, and visualize Uppsala weather data"""
 
 import pandas as pd
 import numpy as np
@@ -13,7 +10,7 @@ import numpy as np
 class MyError(Exception):
 
     """Base class for custom errors."""
-    
+
 class InvalidCityError(MyError):
 
     """Raised when city not defined/not part of dataset."""
