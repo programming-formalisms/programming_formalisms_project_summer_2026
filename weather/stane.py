@@ -28,7 +28,7 @@ class InvalidColumnCountError(MyError):
 
 COLUMN_COUNT = 6
 
-COL_NAMES=['year','month','day','temp','temp2','city']
+COL_NAMES=["year","month","day","temp","temp2","city"]
 
 # Weather data location
 weather_data = "../data/uppsala_tm_1722-2022.dat"
@@ -133,8 +133,7 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
     if "city" not in df.columns:
 #       Warning, city not detected in df, resolving cols by order
         return df[df.iloc[:, 5] == city_dict[city]]
-    else:
-        return df[df["city"] == city_dict[city]]
+    return df[df["city"] == city_dict[city]]
 
 def yearly_average_temp(df: pd.DataFrame) -> pd.Series:
     """Calculate yearly average temp using the 4th column."""
