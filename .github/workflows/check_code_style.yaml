@@ -16,5 +16,6 @@ jobs:
         run: |
           rm -rf learners
           rm my_assert_kriz.py
+          rm krizia_tdd.py
 
       - uses: chartboost/ruff-action@v1
