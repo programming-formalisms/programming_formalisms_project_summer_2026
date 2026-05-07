@@ -106,6 +106,47 @@ def weather_data(filename):
 
 #output function
 
+import pandas as pd
+
 def read_output(df):
-    """ This file produces a data frame based on the choice of analysis we had """
-    return True
+    """Validates output dataframe format."""
+
+    # Check input is actually a DataFrame
+    if not isinstance(df, pd.DataFrame):
+        print("Input is not a DataFrame")
+        return None, False
+
+    # Check number of columns
+    if df.shape[1] != 3:
+        print("Output must have 3 columns")
+        return None, False
+
+    # Expected column types
+    expected_types = [
+        "int",
+        "float",
+        "str"
+    ]
+
+    for i, expected in enumerate(expected_types):
+        col = df.iloc[:, i]
+
+        if expected == "int":
+            if not pd.api.types.is_integer_dtype(col):
+                raise TypeError(
+                    f"Column {i+1} is {col.dtype}. Expected int."
+                )
+
+        elif expected == "float":
+            if not pd.api.types.is_float_dtype(col):
+                raise TypeError(
+                    f"Column {i+1} is {col.dtype}. Expected float."
+                )
+
+        elif expected == "str":
+            if not pd.api.types.is_string_dtype(col):
+                raise TypeError(
+                    f"Column {i+1} is {col.dtype}. Expected string."
+                )
+
+    return df, True
