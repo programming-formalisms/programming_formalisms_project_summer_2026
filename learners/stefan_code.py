@@ -1,6 +1,9 @@
-import seföklsdflksldf
+
 
 def check_corr(r):
+    '''
+    dskfjngsdkjngdkjnrgdek
+    '''
     if isinstance(r,float):
         if -1.0 <= r <= 1.0:
             return True
@@ -10,5 +13,3 @@ def check_corr(r):
         raise TypeError("R needs to be a float value.")
     
 assert check_corr(1.0)
-
-<sdjfklgfnsjdfgn<s
