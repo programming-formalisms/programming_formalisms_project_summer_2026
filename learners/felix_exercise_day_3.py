@@ -101,3 +101,13 @@ try:
 except: 
     has_reported = True
 assert has_reported
+
+# Felix do_experiment()
+
+do_experiment() # Should return a figure and a txt file
+
+def do_experiment(a):
+    """Takes a .dat file as input, returns a figure and a statistics file."""
+    pass
+
+assert do_experiment.__doc__
