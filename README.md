@@ -23,8 +23,8 @@ Do some analysis on data from an Uppsala weather station.
 ## Internal links
 
 - [`docs/requirements/`](docs/requirements.md): design documents
-- [`weather/`](weather/README.md): place to put code
-- [`learners/`](learners/README.md): place to put non-code
+- [`weather/`](weather/README.md): place to put the real code
+- [`learners/`](learners/README.md): place to experiment
 
 ## Continuous integration scripts
 
