@@ -1,6 +1,6 @@
-"""weather branch Kriz"""
+"""Weather branch Kriz."""
 
-krizia_error= 1
+krizia_error = 1
 
 def my_function():
     """Return a greeeting message."""
