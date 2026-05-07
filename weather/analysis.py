@@ -1,5 +1,6 @@
 """Perform the analysis."""
 
+import os.path
 from weather.anna import read_data as annas_read_data
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
@@ -26,3 +27,7 @@ def do_analysis():
     create_statistics_output(data)
     create_figure(data)
     print("Analysis done") # noqa: T201
+
+# TODO: move these to the 'test' folder
+assert os.path.isfile("figure.png")
+assert os.path.isfile("statistics_results.txt")
