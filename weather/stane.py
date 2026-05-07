@@ -46,7 +46,7 @@ weather_data = "../../data/uppsala_tm_1722-2022.dat"
 def file_is_tsv(file):
     """Checks if file exists and is readable as TSV."""
     try:
-        data = pd.read_csv(file, sep="\t")
+        data = pd.read_fwf(file)
         return data
     except Exception as e:
         print(f"Invalid TSV file: {e}")
