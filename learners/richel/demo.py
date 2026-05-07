@@ -1,8 +1,7 @@
-import os
 
 
 def file_exists(filename):
-    """eugwefpwow."""
+    """Eugwefpwow."""
     return True
 
 assert file_exists.__doc__
@@ -58,7 +57,6 @@ def do_analysis(figure_filename, statistics_filename):
     """
     assert is_png_filename(figure_filename)
     assert is_txt_filename(statistics_filename)
-    pass
 
 assert do_analysis.__doc__
 

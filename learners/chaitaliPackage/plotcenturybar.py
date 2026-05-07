@@ -1,5 +1,5 @@
-from chaitali.io import read_uppsala_dat
 from chaitali.aggregate import seasonal_yearly_means
+from chaitali.io import read_uppsala_dat
 from chaitali.plot import plot_century_bars
 from chaitali.stats import compare_to_reference
 

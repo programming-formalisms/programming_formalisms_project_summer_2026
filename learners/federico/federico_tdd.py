@@ -4,8 +4,7 @@ def is_zero(n):
         raise TypeError("'n' is not an integer")
     if n == 0:
         return True
-    else:
-        return False
+    return False
 
 
 assert is_zero.__doc__
@@ -27,12 +26,11 @@ def is_prime(n, d=2):
         raise TypeError("'n' must be an integer!")
     if n < 2:
         return False
-    elif n == d:
+    if n == d:
         return True
-    elif n % d == 0:
+    if n % d == 0:
         return False
-    else:
-        return is_prime(n, d + 1)
+    return is_prime(n, d + 1)
 
 
 assert is_prime.__doc__
@@ -44,6 +42,6 @@ assert not is_prime(4)
 has_thrown = False
 try:
     is_prime(1.4)
-except TypeError as e:
+except TypeError:
     has_thrown = True
 assert has_thrown

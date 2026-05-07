@@ -1,6 +1,7 @@
 import os
-import pandas as pd
 import re
+
+import pandas as pd
 
 
 def file_exists(filename):
