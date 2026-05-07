@@ -2,12 +2,12 @@
 
 import os.path
 
-from weather.anna import read_data as annas_read_data
-from weather.sven import create_figure as svens_create_figure
-from weather.sven import create_statistics_output as svens_create_statistics_output
+from anna import read_data as annas_read_data
+from sven import create_figure as svens_create_figure
+from sven import create_statistics_output as svens_create_statistics_output
 
 
-def check_file_exists():
+def check_file_exists(filename):
 
     pass
 
@@ -39,3 +39,4 @@ def do_analysis():
 do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
+assert check_file_exists('test.txt')
