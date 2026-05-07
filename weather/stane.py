@@ -26,7 +26,8 @@ class InvalidColumnCountError(MyError):
 # Helper data
 #--------------------------------------------------
 
-COLUMN_COUNT = 6
+INPUT_COLUMN_COUNT = 6
+OUTPUT_COLUMN_COUNT = 3
 
 COL_NAMES=["year","month","day","temp","temp2","city"]
 
@@ -50,30 +51,27 @@ city_dict = {
 weather_data = "../../data/uppsala_tm_1722-2022.dat"
 
 
-def file_is_tsv(file):
-    """Checks if file exists and is readable as TSV."""
+def file_is_fwf(file):
+    """Check if file exists and is readable as fwf."""
     try:
-        data = pd.read_fwf(file)
-        return data
-    except Exception as e:
-        print(f"Invalid TSV file: {e}")
+        return pd.read_fwf(file)
+    except pd.errors.DataError: #Needs to be tested
         return None
 
 def load_data(path: str) -> pd.DataFrame:
-    """Reads a TSV file and returns a dataframe."""
+    """Read a TSV file and returns a dataframe."""
     return pd.read_fwf(path)
 
 
-def weather_data(filename):
-    """Validates weather data format."""
-    data = file_is_tsv(filename)
+def validate_input_data_format(filename):
+    """Validate weather data format."""
+    data = file_is_fwf(filename)
 
     if data is None:
         return None, False
 
     # Check number of columns
-    if data.shape[1] != 6:
-        print("Weather file must have 6 columns")
+    if data.shape[1] != INPUT_COLUMN_COUNT:
         return None, False
 
     # Expected types
@@ -91,21 +89,20 @@ def weather_data(filename):
 
         if expected == "int":
             if not pd.api.types.is_integer_dtype(col):
+                msg = f"Column {i+1} is {col.dtype}. Expected int."
                 raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected int.",
+                    msg,
                 )
 
-        elif expected == "float":
-            if not pd.api.types.is_float_dtype(col):
-                raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected float.",
-                )
+        elif expected == "float" and not pd.api.types.is_float_dtype(col):
+            msg_0 = f"Column {i+1} is {col.dtype}. Expected float."
+            raise TypeError(
+                msg_0,
+            )
 
     # Check final column values
     if not data.iloc[:, 5].between(1, 6).all():
-        print("Column 6 values must be between 1 and 6.")
         return None, False
-    print(data.head())
     return data, True
 
 
@@ -124,7 +121,7 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
     """
     cities = city_dict.keys()
     col_count = len(df.columns)
-    if col_count != COLUMN_COUNT:
+    if col_count != INPUT_COLUMN_COUNT:
         msg = f"Expected 6 columns; Received {col_count}"
         raise InvalidColumnCountError(msg)
     if city not in city_dict:
@@ -143,15 +140,13 @@ def yearly_average_temp(df: pd.DataFrame) -> pd.Series:
     return df.groupby("year").mean()["temp"]
 
 def read_output(df):
-    """Validates output dataframe format."""
+    """Validate output dataframe format."""
     # Check input is actually a DataFrame
     if not isinstance(df, pd.DataFrame):
-        print("Input is not a DataFrame")
         return None, False
 
     # Check number of columns
-    if df.shape[1] != 3:
-        print("Output must have 3 columns")
+    if df.shape[1] != OUTPUT_COLUMN_COUNT:
         return None, False
 
     # Expected column types
@@ -165,27 +160,26 @@ def read_output(df):
 
         if expected == "int":
             if not pd.api.types.is_integer_dtype(col):
+                msg = f"Column {i+1} is {col.dtype}. Expected int."
                 raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected int.",
+                    msg,
                 )
 
-        elif expected == "float":
-            if not pd.api.types.is_float_dtype(col):
-                raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected float.",
-                )
+        elif expected == "float" and not pd.api.types.is_float_dtype(col):
+            msg_0 = f"Column {i+1} is {col.dtype}. Expected float."
+            raise TypeError(
+                msg_0,
+            )
 
     return df, True
 
 
 def write_output(df, filename="output.csv"):
-    """Writes dataframe to CSV file."""
+    """Write dataframe to CSV file."""
     if not isinstance(df, pd.DataFrame):
-        print("Input is not a DataFrame")
         return False
 
     df.to_csv(filename, index=False)
 
-    print(f"File saved as {filename}")
     return True
 
