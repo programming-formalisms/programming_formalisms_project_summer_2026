@@ -8,20 +8,22 @@ from weather.sven import create_statistics_output as svens_create_statistics_out
 
 
 def check_file_exists(filename:str):
-    """Check if file exists. Return True if file exists, false otherwise. Throws TypeError if filename is not a string.
+    """Check if file exists.
+
+    Return True if file exists, false otherwise.
+    Throws TypeError if filename is not a string.
 
     Args:
         filename (str): path to file
 
     Returns:
         bool: bool describing file existence
+
     """
     if not isinstance(filename, str):
-        raise TypeError("Input 'filename' expected to be string.")
-    if os.path.exists(filename):
-        return True
-    else:
-        return False
+        error_message = "Input 'filename' expected to be string."
+        raise TypeError(error_message)
+    return bool(os.path.exists(filename))
 
 def read_data():
     """Read the weather data from file."""
@@ -56,6 +58,6 @@ assert check_file_exists("main.py")
 has_thrown = False
 try:
     not check_file_exists(1231)
-except TypeError as e:
+except TypeError:
     has_thrown = True
 assert has_thrown, "Expected TypeError was not raised"
