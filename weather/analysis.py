@@ -29,5 +29,6 @@ def do_analysis():
     print("Analysis done") # noqa: T201
 
 # TODO: move these to the 'test' folder
+do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
