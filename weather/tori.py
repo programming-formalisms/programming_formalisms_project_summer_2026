@@ -4,7 +4,7 @@ import os
 import pandas as pd
 import re
 from scipy import stats
-
+from matplotlib import pyplot as plt 
 
 def file_exists(filename):
     """Check if file exists."""
@@ -23,20 +23,26 @@ def read_data(filename):
         content,
         columns=["Year", "Month", "Day", "avg_temp", "avg_temp_mod", "location"],
     )
+    content = content.astype(float)
     return content
 
 def extract_stats(content):
     """Extracts the average from the data frame."""
-    mean_data = content.astype(float).mean()
+    mean_data = content.mean()
     return mean_data
 
 def get_regression(content):
     """Does a linear regression of the data and outputs a p-value."""
-    content = content.astype(float)
     x, y = content['Year'], content['avg_temp_mod']
     statistic = slope, intercept, r, p, std_err = stats.linregress(x,y)
     
     return statistic.pvalue
+
+def do_plot(content):
+    """Do a plot from the data"""
+    x, y = content['Year'], content['avg_temp_mod']
+    plt.scatter(x,y)
+    plt.savefig("plot.png")
 
 assert list(read_data("data/uppsala_tm_1722-2022.dat").columns) == [
     "Year",
@@ -58,9 +64,11 @@ def do_experiment(file):
     assert not data.empty
     statistic = get_regression(content)
     assert isinstance(statistic, float)
+    do_plot(content)
     assert file_exists("plot.png")
     # Save the statistics results to file
     assert file_exists("statistics_results.txt")
+    
     # Create the figure
     # Save the figure to file
     # assert not file_exists("figure.png")
