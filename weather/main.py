@@ -5,7 +5,7 @@ from analysis import (
 )
 
 
-def main():
+def m
     """Do the analysis."""
     do_analysis()
 
