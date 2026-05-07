@@ -21,7 +21,7 @@ def read_data(filename):
     )
     return content
 
-def extract_stats(content):
+def extract_stats(content)
     data=pd.DataFrame(columns="year, day, month, avg_temp, avg_temp_fix, location")
     return data
 
