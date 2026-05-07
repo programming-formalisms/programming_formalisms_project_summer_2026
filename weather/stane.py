@@ -150,3 +150,15 @@ def read_output(df):
                 )
 
     return df, True
+
+def write_output(df, filename="output.csv"):
+    """Writes dataframe to CSV file."""
+
+    if not isinstance(df, pd.DataFrame):
+        print("Input is not a DataFrame")
+        return False
+
+    df.to_csv(filename, index=False)
+
+    print(f"File saved as {filename}")
+    return True
