@@ -5,6 +5,7 @@ def is_palindrome(input_string):
     else it returns False
     """
     input_string_letters = ''.join(char for char in input_string if char.isalpha())
+    input_string_letters = input_string_letters.lower()
 
     # Error handeling
     if not isinstance(input_string_letters, str):
@@ -26,5 +27,5 @@ assert has_thrown
 
 list_palindrome = ["alla", "Regalager", "Sirat, o ni, inotaris", "No lemon, no melon"]
 for palindrome in list_palindrome:
-    assert is_palindrome(list_palindrome)
+    assert is_palindrome(palindrome)
 
