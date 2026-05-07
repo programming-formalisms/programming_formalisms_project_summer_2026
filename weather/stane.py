@@ -66,9 +66,9 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
         raise InvalidCityError(msg)
     return True
 
-def yearly_average(df: pd.DataFrame) -> pd.DataFrame:
+def yearly_average_temp(df: pd.DataFrame) -> pd.Series:
     """Calculate yearly average temp using the 4th column."""
-    
-    return True
-
-assert yearly_average(test_df)
+    if "year" not in df.columns or "temp" not in df.columns:
+#       Warning, year or temp not detected in df, resolving cols by order
+        return df.groupby(df.iloc[:, 0]).mean().iloc[:, 3]
+    return df.groupby("year").mean()["temp"]
