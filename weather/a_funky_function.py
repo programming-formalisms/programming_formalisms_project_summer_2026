@@ -4,7 +4,6 @@ def funky(s:str, filename:str, num:int):
     """Make file with string s number (num) of times.
 
     Args:
-
         s (str): _description_
         filename (str): _description_
         num (int): _description_
