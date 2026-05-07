@@ -2,13 +2,13 @@
 def get_mean(list_of_numbers):
     """Compute the mean of list of numbers."""
     if not isinstance(list_of_numbers, list):
-        raise TypeError("'l' must be a list.")
+        mes = "'l' must be a list."
+        raise TypeError(mes)
        
     if len(list_of_numbers) == 0:
-        med = "lengths must not be 0"
+        mes = "lengths must not be 0"
         raise ValueError(mes)
-    mean = sum(list_of_numbers) / len(list_of_numbers)
-    return mean
+    return sum(list_of_numbers) / len(list_of_numbers)
 
 assert get_mean.__doc__
 
