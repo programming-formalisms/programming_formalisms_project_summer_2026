@@ -51,7 +51,7 @@ def do_analysis():
 do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
-assert check_file_exists('test.txt')
+assert check_file_exists("main.py")
 
 has_thrown = False
 try:
