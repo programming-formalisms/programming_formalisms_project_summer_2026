@@ -2,24 +2,24 @@
 
 import os.path
 
-from weather.anna import read_data as annas_read_data
-from weather.sven import create_figure as svens_create_figure
-from weather.sven import create_statistics_output as svens_create_statistics_output
+from weather.io import read_data as io_read_data
+from weather.stats import extract_stats
+from weather.plot import create_figure as plot_create_figure
 
 
 def read_data():
     """Read the weather data from file."""
-    return annas_read_data()
-
-
-def create_figure(data):
-    """Create the figure for the paper."""
-    return svens_create_figure(data)
+    return io_read_data()
 
 
 def create_statistics_output(data):
     """Create a file with statistics results."""
-    return svens_create_statistics_output(data)
+    return extract_stats(data)
+
+
+def create_figure(data):
+    """Create the figure for the paper."""
+    return plot_create_figure(data)
 
 
 def do_analysis():
@@ -27,7 +27,8 @@ def do_analysis():
     data = read_data()
     create_statistics_output(data)
     create_figure(data)
-    print("Analysis done") # noqa: T201
+    print("Analysis done")  # noqa: T201
+
 
 # TODO(richelbilderbeek): move these to the 'test' folder # noqa: FIX002
 # https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/issues/2
