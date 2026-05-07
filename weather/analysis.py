@@ -2,7 +2,8 @@
 
 import os.path
 
-from weather.anna import read_data as annas_read_data
+import pandas as pd
+
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
 
@@ -25,9 +26,11 @@ def check_file_exists(filename:str):
         raise TypeError(error_message)
     return bool(os.path.exists(filename))
 
-def read_data():
+def read_data(filename):
     """Read the weather data from file."""
-    return annas_read_data()
+    if check_file_exists(filename):
+        return pd.read_csv(filename, sep=r"\s+")
+    return None
 
 
 def create_figure(data):
