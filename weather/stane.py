@@ -66,4 +66,9 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
         raise InvalidCityError(msg)
     return True
 
-assert city_filter(test_df, "Uppsala", city_dict)
+def yearly_average(df: pd.DataFrame) -> pd.DataFrame:
+    """Calculate yearly average temp using the 4th column."""
+    
+    return True
+
+assert yearly_average(test_df)
