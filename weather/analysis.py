@@ -7,6 +7,10 @@ from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
 
 
+def check_file_exists():
+
+    pass
+
 def read_data():
     """Read the weather data from file."""
     return annas_read_data()
