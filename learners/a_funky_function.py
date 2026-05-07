@@ -6,7 +6,8 @@ def funky(s, filename, num):
     """
 
     f = open(filename, 'w')
-    f.write(s)
+    for i in range(num):
+        f.write(s+'\n')
     f.close()
 
     return True
