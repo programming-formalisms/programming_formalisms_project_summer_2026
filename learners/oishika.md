@@ -61,5 +61,38 @@ R100.2        |Decisions are made democratically                                
 R100.2        |Decisions are adopted                                               |All team members agree|If a majority vote favors a practice, we adopt it
 
 <!-- markdownlint-enable MD013 -->
+#
+#
+# A comment line.
+# Just an edit!
+# ! Just a commit message
+
+#TDD
+#is_prime
 
 
+def is_prime(x):
+    """
+    Check whether the input is a prime number!
+    """
+    # assert isinstance(x, int)
+    
+    if not isinstance(x, int):
+        raise TypeError("This only accepts integers!")
+    
+    assert x > 1
+    
+    for i in range(2,x):
+        # print(i)
+        if x % i == 0:
+            return False
+    print()
+    return True
+    
+    #assert x > 1
+    #assert isinstance(x, int)
+    #pass
+
+    
+assert is_prime.__doc__
+is_prime(1.5)
