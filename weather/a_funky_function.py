@@ -1,4 +1,7 @@
+"""A module to create a file with n number of repetitions of a string s."""
+
 import os
+
 
 def funky(s:str, filename:str, num:int):
     """Make file with string s number (num) of times.
@@ -10,11 +13,11 @@ def funky(s:str, filename:str, num:int):
 
     Returns:
         _type_: _description_
+
     """
-    f = open(filename, "w")
-    for _i in range(num):
-        f.writelines(s+"\n")
-    f.close()
+    with open(filename, "w") as f:
+        for _i in range(num):
+            f.writelines(s+"\n")
 
     return True
 
