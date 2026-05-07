@@ -1,7 +1,7 @@
 """When done, this module will load, analyse, and visualize Uppsala weather data."""
 
 import pandas as pd
-import os
+
 
 #--------------------------------------------------
 # Custom errors
@@ -59,5 +59,3 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
     return True
 
 assert city_filter(test_df, 'Uppsala', city_dict)
-# assert city_filter(test_df_not7, 'Uppsala', city_dict)
-# assert city_filter(test_df, 'Lund', city_dict)
