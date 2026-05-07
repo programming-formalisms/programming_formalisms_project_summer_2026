@@ -7,7 +7,17 @@ from sven import create_figure as svens_create_figure
 from sven import create_statistics_output as svens_create_statistics_output
 
 
-def check_file_exists(filename):
+def check_file_exists(filename:str):
+    """Check if file exists. Return True if file exists, false otherwise. Throws TypeError if filename is not a string.
+
+    Args:
+        filename (str): path to file
+
+    Returns:
+        bool: bool describing file existence
+    """
+    if not isinstance(filename, str):
+        raise TypeError("Input 'filename' expected to be string.")
     if os.path.exists(filename):
         return True
     else:
