@@ -2,9 +2,9 @@
 
 import os.path
 
-from weather.io import read_data as io_read_data
-from weather.stats import extract_stats
-from weather.plot import create_figure as plot_create_figure
+from modules.io import read_data as io_read_data
+from modules.stats import extract_stats
+from modules.plot import create_figure as plot_create_figure
 
 
 def read_data():
