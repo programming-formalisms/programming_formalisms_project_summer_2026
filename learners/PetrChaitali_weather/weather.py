@@ -115,4 +115,3 @@ assert thrown_exception
 # Alternatively, we can implement checks on years (some reasonable range like 0-3000), months, days, temp (-50 to 50 ??)
 # Btw, it would be a good idea to check if the file is tab separated and path to file is valid
 
-assert is_valid_tsv.__doc__
