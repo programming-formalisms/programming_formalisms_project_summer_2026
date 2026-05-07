@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import re
 
 
 def file_exists(filename):
@@ -11,14 +12,8 @@ def read_data(filename):
     content = []
     with open(filename) as infile:
         for line in infile:
-            content.append(
-                line.replace("  ", " ")
-                .replace("  ", " ")
-                .replace("  ", " ")
-                .replace("  ", " ")
-                .strip()
-                .split(" ")
-            )
+            line = re.sub("[ ]+", " ", line)
+            content.append(line.strip().split(" "))
 
     content = pd.DataFrame(
         content,
@@ -26,6 +21,9 @@ def read_data(filename):
     )
     return content
 
+def extract_stats(content):
+    data="stats"
+    return data
 
 assert list(read_data("data/uppsala_tm_1722-2022.dat").columns) == [
     "Year",
