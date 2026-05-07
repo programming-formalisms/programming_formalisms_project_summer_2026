@@ -1,21 +1,24 @@
 # When done, this should provide all tool to:
-# load, 
-# preprocess , 
-# analyse, and 
+# load,
+# preprocess ,
+# analyse, and
 # visualize Uppsala weather data
 
-import numpy as np
 import pandas as pd
+import numpy as np
 
 #--------------------------------------------------
 # Custom errors
 #--------------------------------------------------
 class MyError(Exception):
-    """Base class for custom errors."""
+    """
+    Base class for custom errors."""
 class InvalidCityError(MyError):
-    """Raised when city not defined/not part of dataset."""
+    """
+    Raised when city not defined/not part of dataset."""
 class InvalidColumnTypeError(MyError):
-    """Raised when column is not present or do not contain expected data type."""
+    """
+    Raised when column is not present or do not contain expected data type."""
 
 
 #--------------------------------------------------
