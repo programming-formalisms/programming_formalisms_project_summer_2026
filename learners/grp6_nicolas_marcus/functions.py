@@ -36,8 +36,3 @@ except TypeError as e:
     has_thrown = True
     assert str(e) == "Only strings are allowed", f"Got wrong message: {e}"
 assert has_thrown, "Expected TypeError was not raised"
-
-
-def print_hi():
-    print("hi")
-    return
