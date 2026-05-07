@@ -28,7 +28,7 @@ class InvalidColumnCountError(MyError):
 
 COLUMN_COUNT = 6
 
-COL_NAMES=['year','month','day','temp','temp2','city']
+COL_NAMES=["year","month","day","temp","temp2","city"]
 
 # Weather data location
 weather_data = "../data/uppsala_tm_1722-2022.dat"
