@@ -7,8 +7,6 @@ s
 Methods
 We will first draw a graph showing the temperature curve through each year, this could global showing us the wealth change globally. Since the global earth termprature risen since 1850, we will 
 
-test by vs code again and again
-
 # Requirements
 
 <!-- markdownlint-disable MD013 --><!-- Tables cannot be split up over lines, hence will break 80 characters per line -->
