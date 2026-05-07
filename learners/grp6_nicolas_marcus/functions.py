@@ -4,12 +4,12 @@ def is_palindrome(input_string):
     It accepts a string and terutns True if is palindrome, 
     else it returns False
     """
+    # Error handeling
+    if not isinstance(input_string, str):
+        raise TypeError("Only strings are allowed")
+    
     input_string_letters = ''.join(char for char in input_string if char.isalpha())
     input_string_letters = input_string_letters.lower()
-
-    # Error handeling
-    if not isinstance(input_string_letters, str):
-        raise TypeError("Only strings are allowed")
     
     # Check if input is palindrome
     return input_string_letters == input_string_letters[::-1]
@@ -29,3 +29,10 @@ list_palindrome = ["alla", "Regalager", "Sirat, o ni, inotaris", "No lemon, no m
 for palindrome in list_palindrome:
     assert is_palindrome(palindrome)
 
+has_thrown = False
+try:
+    is_palindrome(1)
+except TypeError as e:
+    has_thrown = True
+    assert str(e) == "Only strings are allowed", f"Got wrong message: {e}"
+assert has_thrown, "Expected TypeError was not raised"
