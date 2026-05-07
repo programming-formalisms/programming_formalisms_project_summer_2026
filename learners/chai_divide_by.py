@@ -1,6 +1,6 @@
 #divide script
-import os
 import sys
+
 
 def divide_by_3(numerator, denominator):
     assert isinstance(numerator, (float, int))

@@ -1,4 +1,3 @@
-import pandas as pd
 
 CENTURIES = {
     "1722–1821": (1722, 1821),
@@ -15,10 +14,9 @@ def assign_century(year):
 def assign_season(month):
     if month in [6, 7, 8]:
         return "Summer"
-    elif month in [10, 11, 12]:
+    if month in [10, 11, 12]:
         return "Winter"
-    else:
-        return None
+    return None
 
 def seasonal_yearly_means(df):
     df = df.copy()

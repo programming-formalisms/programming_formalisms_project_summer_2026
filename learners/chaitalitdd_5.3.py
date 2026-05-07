@@ -2,7 +2,6 @@ has_thrown = False
 
 def is_odd(x):
     """This function checks if the value is odd."""
-    
     global has_thrown
 
     try:
@@ -15,9 +14,8 @@ def is_odd(x):
     if x % 2 != 0:
         print("It is odd")
         return True
-    else:
-        print("It is even")
-        return False
+    print("It is even")
+    return False
 
 
 assert is_odd.__doc__
