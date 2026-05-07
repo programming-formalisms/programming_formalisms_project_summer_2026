@@ -10,7 +10,7 @@ def extract_stats(data):
     data.loc[(data["Year"] >= 1950) & (data["Year"] <= 2022), "Group"] = 3
     data = data.groupby(["Year", "Group"]).mean()
     data = data.filter(items=["avg_temp"]).reset_index()
-    data.to_csv("statistics_results.txt")
+    data.to_csv("statistics_results.txt", index=False)
     return data
 
 
