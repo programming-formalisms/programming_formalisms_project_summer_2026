@@ -1,4 +1,8 @@
-# When done, this should provide all tool to load, preprocess , analyse and visualize Uppsala wetaher data
+# When done, this should provide all tool to:
+# load, 
+# preprocess , 
+# analyse, and 
+# visualize Uppsala weather data
 
 import numpy as np
 import pandas as pd
