@@ -29,5 +29,5 @@ def do_analysis():
     print("Analysis done") # noqa: T201
 
 def compute_mean(num_list: list) -> float:
-    """Compute the mean of a list of numbers"""
+    """Compute the mean of a list of numbers."""
     return dakouri_compute_mean(num_list)
