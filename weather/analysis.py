@@ -8,8 +8,10 @@ from sven import create_statistics_output as svens_create_statistics_output
 
 
 def check_file_exists(filename):
-
-    pass
+    if os.path.exists(filename):
+        return True
+    else:
+        return False
 
 def read_data():
     """Read the weather data from file."""
@@ -40,3 +42,10 @@ do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
 assert check_file_exists('test.txt')
+
+has_thrown = False
+try:
+    not check_file_exists(1231)
+except TypeError as e:
+    has_thrown = True
+assert has_thrown, "Expected TypeError was not raised"
