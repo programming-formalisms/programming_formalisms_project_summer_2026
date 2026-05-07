@@ -3,6 +3,7 @@
 import os
 import pandas as pd
 import re
+from scipy import stats
 
 
 def file_exists(filename):
@@ -29,6 +30,14 @@ def extract_stats(content):
     mean_data = content.astype(float).mean()
     return mean_data
 
+def get_regression(content):
+    """Does a linear regression of the data and outputs a p-value."""
+    content = content.astype(float)
+    x, y = content['Year'], content['avg_temp_mod']
+    statistic = slope, intercept, r, p, std_err = stats.linregress(x,y)
+    
+    return statistic.pvalue
+
 assert list(read_data("data/uppsala_tm_1722-2022.dat").columns) == [
     "Year",
     "Month",
@@ -47,6 +56,7 @@ def do_experiment(file):
     # Do the statistics
     data = extract_stats(content)
     assert not data.empty
+    statistic = get_regression(content)
     assert isinstance(statistic, float)
     # Save the statistics results to file
     assert file_exists("statistics_results.txt")
