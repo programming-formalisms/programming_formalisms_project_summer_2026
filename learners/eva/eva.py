@@ -1,5 +1,7 @@
 ################ Exercise 6 ########################
 import pandas as pd
+
+
 def read_non_empty_file(filename):
     import os
     assert os.path.isfile(filename)
@@ -8,10 +10,10 @@ def read_non_empty_file(filename):
     #content = file.read()
     #file.close()
     #column_names = ['Year', 'Months', 'Day', 'Avg_temp', 'Avg_temp_corrected', 'Data_id_no']
-    content = pd.read_csv(filename, delimiter='\t')#, names=column_names)
+    content = pd.read_csv(filename, delimiter="\t")#, names=column_names)
     assert isinstance(content, pd.DataFrame)
     return content
-  
+
 def do_experiment():
   # Read the data
   data_file = r"C:\Users\EVAK\OneDrive - Umeå universitet\Courses\2026_ProgrammingFormalisms\programming_formalisms_project_summer_2026\data\uppsala_tm_1722-2022.dat"
@@ -27,7 +29,7 @@ def do_experiment():
 data_file = r"C:\Users\EVAK\OneDrive - Umeå universitet\Courses\2026_ProgrammingFormalisms\programming_formalisms_project_summer_2026\data\uppsala_tm_1722-2022.dat"
 content = read_non_empty_file(data_file)
 print(content.columns)
-assert (content.columns ==  ['Year', 'Months', 'Day', 'Avg_temp', 'Avg_temp_corrected', 'Data_id_no']).all()
+assert (content.columns ==  ["Year", "Months", "Day", "Avg_temp", "Avg_temp_corrected", "Data_id_no"]).all()
 
 
 ##################### Exerecise 2 ################
@@ -37,11 +39,10 @@ def is_even(num):
     """
     if not isinstance(num, int):
         raise TypeError("'num' must be of type int")
-    
+
     if (num%2)==0:
         return True
-    else:
-        return False
+    return False
 
 assert is_even.__doc__
 assert is_even(2)
@@ -76,10 +77,10 @@ def is_prime(num):
     def Prime(no, i):
         if no == i:
             return True
-        elif no % i == 0:
+        if no % i == 0:
             return False
         return Prime(no, i + 1)
-    
+
     return Prime(num, 2)
 
 assert is_prime.__doc__
@@ -104,11 +105,10 @@ def is_zero(num):
     """
     if not isinstance(num, (int, float)):
         raise TypeError("Input must be of type int or float")
-    
+
     if num == 0:
         return True
-    else:
-        return False
+    return False
 
 assert is_zero.__doc__
 assert is_zero(0)
