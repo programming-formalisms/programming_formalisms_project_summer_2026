@@ -1,12 +1,17 @@
+"""
+This is marcus test script. Lets fix it!
+"""
+
 import os
-import matplotlib
 import matplotlib.pyplot as plt
 
 def file_exists(file_path):
     """
     Check if input file exists
-     returns True of file exists, else return False
+    
+    returns True of file exists, else return False
     """
+    
     # Check if file exists
     return os.path.exists(file_path)
    
