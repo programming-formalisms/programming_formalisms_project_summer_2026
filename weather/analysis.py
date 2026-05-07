@@ -1,6 +1,7 @@
 """Perform the analysis."""
 
 import os.path
+
 from weather.anna import read_data as annas_read_data
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
@@ -28,7 +29,9 @@ def do_analysis():
     create_figure(data)
     print("Analysis done") # noqa: T201
 
-# TODO: move these to the 'test' folder
+# TODO(richelbilderbeek): move these to the 'test' folder # noqa: FIX002
+# https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/issues/2
+
 do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
