@@ -1,4 +1,4 @@
-def funky(x):
+def funky(s, filename, num):
     """_summary_
 
     Args:
@@ -6,4 +6,9 @@ def funky(x):
     """
     return True
 
-assert funky(1)
+
+test_filename = 'funky.txt'
+assert funky('funky', test_filename, 3)
+
+import os
+assert os.path.exists(test_filename)
