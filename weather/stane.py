@@ -1,5 +1,8 @@
 """When done, this module will load, analyse, and visualize Uppsala weather data."""
 
+import pandas as pd
+import os
+
 #--------------------------------------------------
 # Custom errors
 #--------------------------------------------------
@@ -36,3 +39,9 @@ city_dict = {
 #--------------------------------------------------
 # Function definitions
 #--------------------------------------------------
+
+def file_is_tsv():
+    """Checks if file exists and if it is a valid tsv format"""
+def load_data(path: str) -> pd.DataFrame:
+    """This function reads in the table and returns a dataframe."""
+    pd.read_table(path)
