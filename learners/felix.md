@@ -21,4 +21,4 @@ A correlation between season and mean temperature is described.
 - The program should be able to handle also a .dat, not only a .csv file.
 - The program should be able to handle year-month-day data that is separated into three different columns, as is done in the .dat file. 
 
-# Edit. 
+# New edit. 
