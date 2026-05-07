@@ -28,6 +28,8 @@ class InvalidColumnCountError(MyError):
 
 COLUMN_COUNT = 6
 
+COL_NAMES=['year','month','day','temp','temp2','city']
+
 # Weather data location
 weather_data = "../data/uppsala_tm_1722-2022.dat"
 
@@ -64,7 +66,6 @@ def load_data(path: str) -> pd.DataFrame:
 
 def weather_data(filename):
     """Validates weather data format."""
-    
     data = file_is_tsv(filename)
 
     if data is None:
@@ -82,7 +83,7 @@ def weather_data(filename):
         "int",
         "float",
         "float",
-        "int"
+        "int",
     ]
 
     for i, expected in enumerate(expected_types):
@@ -91,13 +92,13 @@ def weather_data(filename):
         if expected == "int":
             if not pd.api.types.is_integer_dtype(col):
                 raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected int."
+                    f"Column {i+1} is {col.dtype}. Expected int.",
                 )
 
         elif expected == "float":
             if not pd.api.types.is_float_dtype(col):
                 raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected float."
+                    f"Column {i+1} is {col.dtype}. Expected float.",
                 )
 
     # Check final column values
@@ -140,7 +141,6 @@ def yearly_average_temp(df: pd.DataFrame) -> pd.Series:
 
 def read_output(df):
     """Validates output dataframe format."""
-
     # Check input is actually a DataFrame
     if not isinstance(df, pd.DataFrame):
         print("Input is not a DataFrame")
@@ -154,7 +154,7 @@ def read_output(df):
     # Expected column types
     expected_types = [
         "int",
-        "float"
+        "float",
     ]
 
     for i, expected in enumerate(expected_types):
@@ -163,13 +163,13 @@ def read_output(df):
         if expected == "int":
             if not pd.api.types.is_integer_dtype(col):
                 raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected int."
+                    f"Column {i+1} is {col.dtype}. Expected int.",
                 )
 
         elif expected == "float":
             if not pd.api.types.is_float_dtype(col):
                 raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected float."
+                    f"Column {i+1} is {col.dtype}. Expected float.",
                 )
 
     return df, True
@@ -177,7 +177,6 @@ def read_output(df):
 
 def write_output(df, filename="output.csv"):
     """Writes dataframe to CSV file."""
-
     if not isinstance(df, pd.DataFrame):
         print("Input is not a DataFrame")
         return False
