@@ -13,8 +13,3 @@ Using `weather` (instead of `src/weather`) is recommended by:
 A modern package such as
 [seaborn](https://github.com/mwaskom/seaborn/tree/master)
 also follow that structure, i.e. `/seaborn`.
-
-
-
-looadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawdlooadawdawdfawd
-- [The official Python documentation](/asdasd/asdasd/bal.txt)
