@@ -26,8 +26,8 @@ def read_data(filename):
 
 def extract_stats(content):
     """Extracts the average from the data frame."""
-    data="stats"
-    return data
+    mean_data = content.astype(float).mean()
+    return mean_data
 
 assert list(read_data("data/uppsala_tm_1722-2022.dat").columns) == [
     "Year",
@@ -43,10 +43,11 @@ def do_experiment(file):
     # Read the data
     file_exists(file)
     content = read_data(file)
-    assert not read_data("data/uppsala_tm_1722-2022.dat").empty
+    assert not content.empty
     # Do the statistics
     data = extract_stats(content)
-    # assert not extract_stats(data).empty
+    assert not data.empty
+    assert isinstance(statistic, float)
     # Save the statistics results to file
     assert file_exists("statistics_results.txt")
     # Create the figure
