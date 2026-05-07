@@ -4,7 +4,7 @@ import os
 
 file = "../data/uppsala_tm_1722-2022.txt"
 def read_file(your_file):
-    """Read a file"""
+    """Read a file."""
     with open(your_file) as f:
         f.read()
 
