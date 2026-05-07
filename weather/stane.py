@@ -130,7 +130,11 @@ def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
     if city not in city_dict:
         msg = f"{city} is not defined, defined cities are: {cities}"
         raise InvalidCityError(msg)
-    return True
+    if "city" not in df.columns:
+#       Warning, city not detected in df, resolving cols by order
+        return df[df.iloc[:, 5] == city_dict[city]]
+    else:
+        return df[df["city"] == city_dict[city]]
 
 def yearly_average_temp(df: pd.DataFrame) -> pd.Series:
     """Calculate yearly average temp using the 4th column."""
