@@ -4,7 +4,6 @@ def get_mean(list_of_numbers):
     if not isinstance(list_of_numbers, list):
         mes = "'l' must be a list."
         raise TypeError(mes)
-       
     if len(list_of_numbers) == 0:
         mes = "lengths must not be 0"
         raise ValueError(mes)
