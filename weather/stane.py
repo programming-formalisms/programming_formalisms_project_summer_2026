@@ -11,14 +11,12 @@ import pandas as pd
 # Custom errors
 #--------------------------------------------------
 class MyError(Exception):
-    """Base class for custom errors"""
-    pass
+    """Base class for custom errors."""
 class InvalidCityError(MyError):
-    """Raised when city not defined/not part of dataset"""
-    pass
+    """Raised when city not defined/not part of dataset."""
 class InvalidColumnTypeError(MyError):
-    """Raised when column is not present or do not contain expected data type"""
-    pass
+    """Raised when column is not present or do not contain expected data type."""
+
 
 #--------------------------------------------------
 # Helper data
@@ -34,7 +32,7 @@ city_dict = {
     "Betna"             :   3,
     "Linköping"         :   4,
     "Stockholm"         :   5,
-    "Interpolated"      :   6
+    "Interpolated"      :   6,
 }
 
 #--------------------------------------------------
