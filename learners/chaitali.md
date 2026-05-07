@@ -24,3 +24,6 @@
  *Note for addition to requirements* : 1. read_data should be blind to the format of the data inputed
          2. The date time format is in 3 columns
          3. Additional requirement by the tool can be if provided in form of string, the tool should transform the date to the applied format.
+
+## Trying Integrated Developm,ent Environment
+Checked with VS Code
