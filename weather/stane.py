@@ -1,8 +1,7 @@
+"""When done, this module will load, analyse, and visualize Uppsala weather data."""
 
-"""When done, this module will load, analyse, and visualize Uppsala weather data"""
-
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 
 #--------------------------------------------------
 # Custom errors
