@@ -31,3 +31,4 @@
 #
 #     assert file_exists("figure.png")
 #
+krizia_error=1
