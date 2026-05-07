@@ -70,10 +70,6 @@ R100.2        |Decisions are adopted                                            
 #TDD
 #is_prime
 
-<<<<<<< HEAD
-# Commenting from the feature branch!
-=======
-
 def is_prime(x):
     """
     Check whether the input is a prime number!
@@ -99,4 +95,5 @@ def is_prime(x):
     
 assert is_prime.__doc__
 is_prime(1.5)
->>>>>>> main
+
+# Commenting from the feature branch!
