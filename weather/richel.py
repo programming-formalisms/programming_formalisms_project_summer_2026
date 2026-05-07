@@ -1,7 +1,9 @@
 """Richel's code."""
 
-from scipy import stats
 from pathlib import Path
+
+from scipy import stats
+
 
 def file_exists_bis(path: Path):
     """Check that the file exists."""
