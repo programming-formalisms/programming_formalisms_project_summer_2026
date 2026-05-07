@@ -25,7 +25,8 @@ def create_figure(data):
 def do_analysis():
     """Do the analysis."""
     data = read_data()
-    create_statistics_output(data)
+    stats = create_statistics_output(data)
+    assert not stats.empty
     create_figure(data)
     print("Analysis done")  # noqa: T201
 

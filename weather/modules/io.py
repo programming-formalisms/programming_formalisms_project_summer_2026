@@ -11,6 +11,7 @@ def file_exists(filename: Path):
     return filename.is_file()
 
 
+assert file_exists.__doc__
 assert file_exists(Path("../data/uppsala_tm_1722-2022.dat"))
 assert not file_exists(Path("file_that_does_not_exist.txt"))
 
@@ -29,9 +30,10 @@ def read_data():
     return pd.DataFrame(
         content,
         columns=["Year", "Month", "Day", "avg_temp", "avg_temp_mod", "location"],
-    )
+    ).apply(pd.to_numeric)
 
 
+assert read_data.__doc__
 assert not read_data().empty
 
 assert list(read_data().columns) == [
