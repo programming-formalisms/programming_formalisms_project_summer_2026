@@ -55,7 +55,7 @@ def file_is_tsv(file):
 
 def load_data(path: str) -> pd.DataFrame:
     """Reads a TSV file and returns a dataframe."""
-    return pd.read_table(path)
+    return pd.read_fwf(path)
 
 
 def weather_data(filename):
