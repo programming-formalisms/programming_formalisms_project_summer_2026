@@ -183,3 +183,16 @@ def write_output(df, filename="output.csv"):
 
     return True
 
+assert city_filter(test_df, "Uppsala",city_dict)
+thrown_ex = False
+try:
+    city_filter(test_df[["Col1", "Col2"]],"Uppsala",city_dict)
+except InvalidColumnCountError:
+    thrown_ex = True
+assert thrown_ex
+thrown_ex = False
+try:
+    city_filter(test_df,"Uppsalalala",city_dict)
+except InvalidColumnCountError:
+    thrown_ex = True
+assert thrown_ex
