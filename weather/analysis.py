@@ -3,6 +3,7 @@
 import os.path
 
 from weather.anna import read_data as annas_read_data
+from weather.dakouri_ci import compute_mean as dakouri_compute_mean
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
 
