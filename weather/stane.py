@@ -104,3 +104,8 @@ def weather_data(filename):
     return data, True
 
 
+#output function
+
+def read_output(df):
+    """ This file produces a data frame based on the choice of analysis we had """
+    return True
