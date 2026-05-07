@@ -1,14 +1,18 @@
-def is_palindrome(string):
+def is_palindrome(input_string):
     """
     This function checks for if a strig is a palidrome.
     It accepts a string and terutns True if is palindrome, 
     else it returns False
     """
+    input_string_letters = ''.join(char for char in input_string if char.isalpha())
 
-    if not isinstance(string, str):
+    # Error handeling
+    if not isinstance(input_string_letters, str):
         raise TypeError("Only strings are allowed")
-    else:
-        return True
+    
+    # Check if input is palindrome
+    return input_string_letters == input_string_letters[::-1]
+
     
 
 assert is_palindrome.__doc__
@@ -19,3 +23,8 @@ try:
 except:
     has_thrown = True
 assert has_thrown
+
+list_palindrome = ["alla", "Regalager", "Sirat, o ni, inotaris", "No lemon, no melon"]
+for palindrome in list_palindrome:
+    assert is_palindrome(list_palindrome)
+
