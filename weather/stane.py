@@ -1,7 +1,7 @@
 """When done, this module will load, analyse, and visualize Uppsala weather data."""
 
 import pandas as pd
-import os
+
 
 #--------------------------------------------------
 # Custom errors
@@ -18,10 +18,15 @@ class InvalidColumnTypeError(MyError):
 
     """Raised when column is not present or do not contain expected data type."""
 
+class InvalidColumnCountError(MyError):
+
+    """Raised when column is different than expected."""
 
 #--------------------------------------------------
 # Helper data
 #--------------------------------------------------
+
+COLUMN_COUNT = 6
 
 # Weather data location
 weather_data = "../data/uppsala_tm_1722-2022.dat"
@@ -51,7 +56,6 @@ def file_is_tsv(file):
     except Exception as e:
         print(f"Invalid TSV file: {e}")
         return None
-
 
 def load_data(path: str) -> pd.DataFrame:
     """Reads a TSV file and returns a dataframe."""
@@ -106,7 +110,33 @@ def weather_data(filename):
 
 #output function
 
-import pandas as pd
+
+test_df = pd.DataFrame.from_dict({"Col1":[1984,1985,1986],
+                                  "Col2":[4,5,6], "Col3":[10,5,26],
+                                  "Col4":[10.4,12.7,22.1],
+                                  "Col5":[10.1,12.9,21.4],
+                                  "Col6":[1,2,1]})
+def city_filter(df: pd.DataFrame, city: str, city_dict: dict) -> pd.DataFrame:
+    """Filter rows by city using the 6th column.
+
+    Valid cities: Uppsala, Risinge, Betna, Linköping, Stockholm, Interpolated.
+    """
+    cities = city_dict.keys()
+    col_count = len(df.columns)
+    if col_count != COLUMN_COUNT:
+        msg = f"Expected 6 columns; Received {col_count}"
+        raise InvalidColumnCountError(msg)
+    if city not in city_dict:
+        msg = f"{city} is not defined, defined cities are: {cities}"
+        raise InvalidCityError(msg)
+    return True
+
+def yearly_average_temp(df: pd.DataFrame) -> pd.Series:
+    """Calculate yearly average temp using the 4th column."""
+    if "year" not in df.columns or "temp" not in df.columns:
+#       Warning, year or temp not detected in df, resolving cols by order
+        return df.groupby(df.iloc[:, 0]).mean().iloc[:, 3]
+    return df.groupby("year").mean()["temp"]
 
 def read_output(df):
     """Validates output dataframe format."""
@@ -124,8 +154,7 @@ def read_output(df):
     # Expected column types
     expected_types = [
         "int",
-        "float",
-        "str"
+        "float"
     ]
 
     for i, expected in enumerate(expected_types):
@@ -143,13 +172,8 @@ def read_output(df):
                     f"Column {i+1} is {col.dtype}. Expected float."
                 )
 
-        elif expected == "str":
-            if not pd.api.types.is_string_dtype(col):
-                raise TypeError(
-                    f"Column {i+1} is {col.dtype}. Expected string."
-                )
-
     return df, True
+
 
 def write_output(df, filename="output.csv"):
     """Writes dataframe to CSV file."""
@@ -162,3 +186,4 @@ def write_output(df, filename="output.csv"):
 
     print(f"File saved as {filename}")
     return True
+

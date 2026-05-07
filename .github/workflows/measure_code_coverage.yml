@@ -17,6 +17,10 @@ jobs:
       with:
         python-version: '3.13' 
 
+
+    - name: Install the requirements of our package
+      run: pip install -r requirements.txt
+
     - name: Remove folders that need no checking for code style
       run: |
         rm -rf learners
