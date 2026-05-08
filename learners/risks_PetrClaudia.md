@@ -29,18 +29,12 @@ R2.1.12       |Different months have different amounts of days                  
 R2.1.13       |Leap years have 29 days in February                                 | see R2.1.12 |  |  |
 R2.2          |The function `is_datetime` describes the `datetime` limits          |  |  |  |
 R3            |Can predict temperatures by interpolation                           | | | | 
-.             |The function `predict_temparature`'s first argument is the data     |Passes the test case  |||Passing `predict_temperature` the data read from the file as a first argument gives no exception
-.             |.                                                                   |Passes the test case  |||Passing `predict_temperature` any other type of data as a first argument raises an exception
-.             |The function `predict_temparature`'s second argument is a `datetime`|Passes the test case  |||Passing `predict_temperature` a `datetime` as a second argument gives no exception
-.             |.                                                                   |Passes the test case  |||Passing `predict_temperature` any other type of data as a second argument raises an exception
-.             |Predicting before the first measurement fails                       |Passes the test case  |||The function `predict_temparature` raises an exception
-.             |.                                                                   |.                     |||When predicting the temperature on the time exactly between two temperature measurements, the predicted temperature is the average of the two
-.             |.                                                                   |.                     |||When predicting the temperature on the time a temperature measurement is made, the exact measurement is returned
+predicting the temperature on the time a temperature measurement is made, the exact measurement is returned
 R90           |Can convert temperature from Celsius to Kelvin                      |Passes the test cases |||`convert_celsius_to_kelvin(-273.15)` returns zero (Kelvin), `convert_celsius_to_kelvin(0)` returns `273.15` (Kelvin)
 R91           |Can convert temperature from Kelvin to Celsius                      |Passes the test cases |||`convert_kelvin_to_celsius(0)` returns -273.15 (Celsius), `convert_kelvin_to_celsius(273.15)` returns `0` (Celsius)
 R100          |Best practices are followed                                         |All team members agree|||We think we follow the best practices as found in the academic literature
 R100.1        |Best practices are discussed                                        |All team members agree|||If the team agrees a practice found in the academic literature to be best, it is discussed
 R100.2        |Decisions are made democratically                                   |All team members agree|||If there are candidate better practices, these are voted for/against
 R100.2        |Decisions are adopted                                               |All team members agree|||If a majority vote favors a practice, we adopt it
-
+A new line | foo| foo | foo| foo | f
 <!-- markdownlint-enable MD013 -->
