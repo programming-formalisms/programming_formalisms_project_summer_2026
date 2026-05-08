@@ -10,7 +10,8 @@ With this package, you'll be able to compute statistics such as median, mean, st
 
 # Dependencies
 - python:3.12
-- pandasgit branch
+- panda
+
 
 
 ## Installation
