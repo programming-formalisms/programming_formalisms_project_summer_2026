@@ -11,6 +11,8 @@
 ## Getting started
 
 ## Citation
+ 
+If you use this code, please use the provided [citation](CITATION.cff) 
 
 ## License
 
