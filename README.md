@@ -32,7 +32,7 @@ pip install -i https://test.pypi.org/simple/ uppsalaweathersummer2026richel==0.3
 ## Running the analysis
 
 ```python
-import weather
+import weather.analysis
 weather.analysis.do_analysis()
 ```
 
