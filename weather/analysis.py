@@ -1,15 +1,36 @@
 """Perform the analysis."""
 
-import os.path
+import os
+import pandas as pd
 
 from weather.anna import read_data as annas_read_data
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
 
 
-def read_data():
-    """Read the weather data from file."""
-    return annas_read_data()
+
+
+def load_data(file_path):
+
+    """
+    Read the data into a dataframe
+    """
+    
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"error")
+
+    column_names = [
+        'year', 'month', 'day', 
+        'avg_temp', 'corrected_temp', 'location_id'
+    ]
+
+
+    df = pd.read_csv(file_path, sep=r'\s+', names=column_names)
+    
+    assert not df.empty, "error"
+    assert len(df.columns) == 6, f"error"
+
+    return df
 
 
 def create_figure(data):
@@ -35,3 +56,11 @@ def do_analysis():
 do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
+
+
+path = r"data\uppsala_tm_1722-2022.dat"  
+data = load_data(path)
+
+
+
+print(data.head())
