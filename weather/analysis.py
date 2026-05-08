@@ -10,7 +10,7 @@ from weather.sven import create_statistics_output as svens_create_statistics_out
 
 
 
-def load_data(file_path):
+def read_data(file_path):
 
     """
     Read the data into a dataframe
@@ -43,9 +43,9 @@ def create_statistics_output(data):
     return svens_create_statistics_output(data)
 
 
-def do_analysis():
+def do_analysis(file_path):
     """Do the analysis."""
-    data = read_data()
+    data = read_data(file_path)
     create_statistics_output(data)
     create_figure(data)
     print("Analysis done") # noqa: T201
@@ -53,14 +53,10 @@ def do_analysis():
 # TODO(richelbilderbeek): move these to the 'test' folder # noqa: FIX002
 # https://github.com/programming-formalisms/programming_formalisms_project_summer_2026/issues/2
 
-do_analysis()
+
+path = r"data\uppsala_tm_1722-2022.dat"  
+do_analysis(path)
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
 
-
-path = r"data\uppsala_tm_1722-2022.dat"  
-data = load_data(path)
-
-
-
-print(data.head())
+data = read_data(path)
