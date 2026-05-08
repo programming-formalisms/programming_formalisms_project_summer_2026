@@ -54,7 +54,6 @@ import os
 
 
 def do_experiment(filname):
-    import os
 
     # Read the data
     assert os.path.isfile(filename)

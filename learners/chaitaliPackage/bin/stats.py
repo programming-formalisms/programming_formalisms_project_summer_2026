@@ -1,5 +1,6 @@
 import numpy as np
-from scipy.stats import ttest_ind, mannwhitneyu
+from scipy.stats import mannwhitneyu, ttest_ind
+
 
 def compare_to_reference(yearly_df, reference="1722–1821", season="Summer"):
     ref = yearly_df[
@@ -22,14 +23,14 @@ def compare_to_reference(yearly_df, reference="1722–1821", season="Summer"):
         u_p = mannwhitneyu(ref, cur, alternative="two-sided").pvalue
 
         d = (cur.mean() - ref.mean()) / np.sqrt(
-            (cur.var() + ref.var()) / 2
+            (cur.var() + ref.var()) / 2,
         )
 
         results[century] = {
             "delta_T": cur.mean() - ref.mean(),
             "p_ttest": t_p,
             "p_mannwhitney": u_p,
-            "cohens_d": d
+            "cohens_d": d,
         }
 
     return results

@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-Am I now in my own branch?
-=======
-I modified something!
->>>>>>> main

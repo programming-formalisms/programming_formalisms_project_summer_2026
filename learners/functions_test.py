@@ -1,7 +1,7 @@
 # def greeting(variable1,variable2):
 #     print(f"Hi, {variable1}!")
 #     print(1+variable2)
-    
+
 
 # greeting("somename",1)
 
@@ -15,7 +15,7 @@
 # average = sum/n
 # print(average)
 
-p= 'AAAAA'
+p= "AAAAA"
 # q = 'TTGCC'
 
 print(isinstance(p, str))
