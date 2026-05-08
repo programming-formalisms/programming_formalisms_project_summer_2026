@@ -1,14 +1,16 @@
 # The Uppsala Weather package
 
-<punchline here>
-
 ## About
-
 
 ## Installation
 
-
 ## Getting started
+
+Download test data. 
+
+from Uppsala_weather import download_data
+
+Run test on downloaded data. 
 
 ## Citation
 
