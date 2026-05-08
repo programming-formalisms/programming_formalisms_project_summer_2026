@@ -100,3 +100,14 @@ Hope and dream - version control
 this is so cool
 
 
+<<<<<<< HEAD:learners/Bilan/bilan.md
+# New Edit
+# do_experiment() # Should return a figure and a txt file
+
+def do_experiment(a):
+    """Takes a .dat file as input, returns a figure and a statistics file."""
+    pass
+
+assert do_experiment.__doc__ 
+=======
+>>>>>>> 006a9cf4960b7f3eb9607fc63075677a8f46a619:learners/bilan.md
