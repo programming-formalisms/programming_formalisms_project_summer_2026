@@ -3,11 +3,11 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["weather"]
+packages = ["uppsalaweathersummer2026richel"]
 
 [project]
-name = "uppsalaweathersummer2026"
-version = "0.1"
+name = "uppsalaweathersummer2026richel"
+version = "0.3"
 authors = [
   { name="Richèl Bilderbeek", email="rjcbilderbeek@gmail.com" },
 ]
@@ -29,12 +29,12 @@ classifiers = [
     lint.select = ["ALL"]
     lint.ignore = ["ANN", "PT", "PTH", "D211", "D213", "S101", "B006"]
 
-[tool.hatch.build.targets.sdist]
-include = [
-  "/data",
-  "/weather",
-  "/tests",
-]
+#[tool.hatch.build.targets.sdist]
+#include = [
+#  "/data",
+#  "/weather",
+#  "/tests",
+#]
 
 # From https://wersdoerfer.de/blogs/ephes_blog/how-to-add-extra-data-to-a-python-package/
 # [tool.hatch.build.targets.sdist.force-include]
