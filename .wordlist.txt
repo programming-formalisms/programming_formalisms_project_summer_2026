@@ -1,6 +1,8 @@
 Richèl
 nxp
 seaborn
+PyPI
+testPyPI
 Richel
 Formalisms
 formalisms

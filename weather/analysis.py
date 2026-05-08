@@ -2,15 +2,44 @@
 
 import os.path
 
+import pandas as pd
+
 from weather.anna import read_data as annas_read_data
+from weather.stane import city_dict
+from weather.stane import city_filter as peters_city_filter
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
 
+
+def check_file_exists(filename:str):
+    """Check if file exists.
+
+    Return True if file exists, false otherwise.
+    Throws TypeError if filename is not a string.
+
+    Args:
+        filename (str): path to file
+
+    Returns:
+        bool: bool describing file existence
+
+    """
+    if not isinstance(filename, str):
+        error_message = "Input 'filename' expected to be string."
+        raise TypeError(error_message)
+    return bool(os.path.exists(filename))
 
 def read_data():
     """Read the weather data from file."""
     return annas_read_data()
 
+def city_filter(df: pd.DataFrame, city: str, city_dict=city_dict) -> pd.DataFrame:
+    """Filter rows by city using the "city" or the 6th column.
+
+    Valid cities: Uppsala, Risinge, Betna, Linköping, Stockholm, Interpolated.
+    Returns a filtered DataFrame.
+    """
+    return peters_city_filter(df, city, city_dict)
 
 def create_figure(data):
     """Create the figure for the paper."""
@@ -35,3 +64,11 @@ def do_analysis():
 do_analysis()
 assert os.path.isfile("figure.png")
 assert os.path.isfile("statistics_results.txt")
+assert check_file_exists("main.py")
+
+has_thrown = False
+try:
+    not check_file_exists(1231)
+except TypeError:
+    has_thrown = True
+assert has_thrown, "Expected TypeError was not raised"

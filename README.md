@@ -20,6 +20,22 @@ Learners' project of the Programming Formalisms course of summer 2026
 
 Do some analysis on data from an Uppsala weather station.
 
+## Installing the package
+
+This package will not end up on PyPI, but it will be uploaded to testPyPI.
+For example, this works:
+
+```python
+pip install -i https://test.pypi.org/simple/ uppsalaweathersummer2026richel==0.3
+```
+
+## Running the analysis
+
+```python
+import weather.analysis
+weather.analysis.do_analysis()
+```
+
 ## Internal links
 
 - [`docs/requirements/`](docs/requirements.md): design documents
