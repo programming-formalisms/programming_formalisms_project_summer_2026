@@ -4,12 +4,12 @@ import os.path
 
 import pandas as pd
 
-from weather.anna import read_data as annas_read_data
 from weather.stane import city_dict
 from weather.stane import city_filter as peters_city_filter
 from weather.sven import create_figure as svens_create_figure
 from weather.sven import create_statistics_output as svens_create_statistics_output
 
+filename = "../data/uppsala_tm_1722-2022.dat"
 
 def check_file_exists(filename:str):
     """Check if file exists.
@@ -29,9 +29,12 @@ def check_file_exists(filename:str):
         raise TypeError(error_message)
     return bool(os.path.exists(filename))
 
-def read_data():
+def read_data(filename):
     """Read the weather data from file."""
-    return annas_read_data()
+    headers = ["Year", "Month", "Day", "Avg_temp", "Avg_temp_mod", "City_id"]
+    weather_data = pd.read_csv(filename, sep = "\s+", names = headers)
+
+    return weather_data
 
 def city_filter(df: pd.DataFrame, city: str, city_dict=city_dict) -> pd.DataFrame:
     """Filter rows by city using the "city" or the 6th column.
@@ -53,7 +56,7 @@ def create_statistics_output(data):
 
 def do_analysis():
     """Do the analysis."""
-    data = read_data()
+    data = read_data(filename)
     create_statistics_output(data)
     create_figure(data)
     print("Analysis done") # noqa: T201
